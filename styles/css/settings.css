@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Lighthaus";
+  src: url("/fonts/Lighthaus.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Ambidexter";
+  src: url("/fonts/Ambidexter_Regular.woff") format("woff"), url("/fonts/Ambidexter_Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gilroy Light";
+  src: url("/fonts/Gilroy-Light.woff") format("woff"), url("/fonts/Gilroy-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gilroy Extrabold";
+  src: url("/fonts/Gilroy-Extrabold.woff") format("woff"), url("/fonts/Gilroy-Extrabold.woff2") format("woff2");
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy Light";
+}
+
+body {
+  font-size: 18px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Lighthaus";
+}
+
+a {
+  text-decoration: none;
+  color: #262626;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1251px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.text-ambidexter {
+  font-family: "Ambidexter";
+}
+/*# sourceMappingURL=settings.css.map */

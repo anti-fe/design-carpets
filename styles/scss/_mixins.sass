@@ -1,0 +1,40 @@
+@import 'vars'
+
+//BUTTONS
+=btn-light
+    color: $c-white
+    font-size: $fs-18
+    font-family: $gilroy-l 
+    border: 1px solid $c-white
+    background-color: $accent
+    max-width: 73px
+    width: 100%
+    padding: 0 10px
+    text-align: center
+=btn-dark($fs, $width)
+    color: $c-accent
+    font-size: $fs-18
+    font-family: $gilroy-l 
+    border: 1px solid $c-white
+    background-color: $accent
+    max-width: 312px
+    width: $width
+    padding: 0 10px
+    text-align: center
+//TEXT
+=text($fs, $color, $ff)
+    font-size: $fs
+    color: $color
+    font-family: $ff
+=section-title
+    font-size: $fs-36
+    font-family: $ff-lighthaus
+    color: $c-accent
+    text-transform: uppercase
+    margin-bottom: $m-title
+// FLEX CONTAINER
+=flex($jc, $ai, $fd) 
+    display: flex
+    justify-content: $jc
+    align-items: $ai
+    flex-direction: $fd

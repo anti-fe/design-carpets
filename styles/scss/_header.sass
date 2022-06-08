@@ -1,0 +1,44 @@
+.header 
+    width: 100%
+    height: 81px
+    &__navbar 
+        +flex(normal, center, row)
+        height: 100%
+    &__logo 
+        +text($fs-26, $c-accent, $ff-lighthaus)
+    &__navbar-menu
+        +flex(space-between, center, row)
+        height: 100%
+        margin: 0 auto
+    &__navbar-item
+        height: 100%
+        &:not(:last-child) 
+            margin-right: 45px
+    &__navbar-link 
+        +text($fs-18, $c-black, $ff-gilroy-l)
+        +flex(center, center,row)
+        padding: 0 15px
+        height: 100%
+        position: relative
+        transition: color .2s ease
+        &::before 
+            content: ''
+            height: 0
+            width: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background-color: $c-accent
+            transition: all .2s ease
+            z-index: -1
+        &:hover::before 
+            height: 10%
+        &:active::before 
+            height: 100%
+        &:active 
+            color: $c-white
+        
+        
+
+ 
+        

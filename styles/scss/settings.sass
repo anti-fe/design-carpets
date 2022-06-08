@@ -1,0 +1,41 @@
+@import 'vars'
+@import 'mixins'
+// FONTS
+@font-face
+    font-family: "Lighthaus"
+    src: url('/fonts/Lighthaus.woff') format('woff')
+@font-face 
+    font-family: "Ambidexter" 
+    src: url('/fonts/Ambidexter_Regular.woff') format('woff'), 
+    url('/fonts/Ambidexter_Regular.woff2') format('woff2')
+@font-face 
+    font-family: "Gilroy Light" 
+    src: url('/fonts/Gilroy-Light.woff') format('woff'), 
+    url('/fonts/Gilroy-Light.woff2') format('woff2')
+@font-face 
+    font-family: "Gilroy Extrabold" 
+    src: url('/fonts/Gilroy-Extrabold.woff') format('woff'), 
+    url('/fonts/Gilroy-Extrabold.woff2') format('woff2')
+
+*, *::after, *::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: $ff-gilroy-l
+body 
+    font-size: $fs-18
+h1,h2,h3,h4,h5 
+    font-family: $ff-lighthaus
+a 
+    text-decoration: none
+    color: $c-black
+ul, ol 
+    list-style-type: none
+
+.container
+    max-width: 1251px
+    padding: 0 15px
+    margin: 0 auto
+.text-ambidexter
+    font-family: $ff-ambidexter
+    
