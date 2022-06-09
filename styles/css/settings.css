@@ -54,4 +54,12 @@ ul, ol {
 .text-ambidexter {
   font-family: "Ambidexter";
 }
+
+.section-title {
+  font-size: 36px;
+  font-family: "Lighthaus";
+  color: #445658;
+  text-transform: uppercase;
+  margin-bottom: 90px;
+}
 /*# sourceMappingURL=settings.css.map */
