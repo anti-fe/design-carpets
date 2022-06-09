@@ -1,0 +1,51 @@
+@import 'vars'
+@import 'mixins'
+
+.main 
+    background-image: url('/images/bg-first-screen.png') 
+    background-repeat: no-repeat
+    background-attachment: fixed 
+    background-position: top
+    background-size: cover
+    height: 100vh
+    max-width: 100vw
+    width: 100%
+    margin: 0 auto
+    padding-top: 81px 
+    &__content 
+        +flex(flex-start, flex-start, column)
+        padding-top: 6%
+    &__title 
+        font-size: $fs-64
+        color: $c-white
+        max-width: 700px
+        width: 100%
+        @media (max-width: 768px) 
+            font-size: $fs-48
+            margin-top: 80px
+        @media (max-width: 564px) 
+            font-size: $fs-36
+        @media (max-width: 400px) 
+            font-size: $fs-28
+    &__btn
+        +btn-dark(22px, 190px)
+        padding: 10px 0
+        margin-top: 35px
+        position: relative
+        transition: all .2s ease
+        &:hover
+            background-color: #4E5E60
+        &:hover::after 
+            width: 100%
+        &::after 
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            background-color: $c-white
+            height: 2px
+            width: 0 
+            transition: all .2s ease
+            
+
+
