@@ -1,4 +1,4 @@
-
+import slider from './slider.js';
 
 const burgerMenuBtn = document.querySelector('.burger-menu__close-btn'),
     burgerMenu = document.querySelector('.burger-menu');
@@ -12,3 +12,5 @@ burgerMenuBtn.addEventListener('click', ()=>{
 window.addEventListener('scroll', (e)=>{
     window.scrollY >= 100 ? header.classList.add('header_active') : header.classList.remove('header_active');
 })
+//Запуск слайдера
+slider();
