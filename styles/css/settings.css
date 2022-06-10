@@ -61,5 +61,16 @@ ul, ol {
   color: #445658;
   text-transform: uppercase;
   margin-bottom: 90px;
+  transition: all 1s ease;
+}
+
+.animBottom {
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.animBottomNone {
+  transform: translateY(0px);
+  opacity: 1;
 }
 /*# sourceMappingURL=settings.css.map */

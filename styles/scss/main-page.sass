@@ -25,6 +25,7 @@
         color: $c-white
         max-width: 700px
         width: 100%
+        transition: all 1s ease
         @media (max-width: 768px) 
             font-size: $fs-48
             margin-top: 80px
@@ -34,11 +35,12 @@
         @media (max-width: 400px) 
             font-size: $fs-28
     &__btn
+        
         +btn-dark(22px, 190px)
         padding: 10px 0
         margin-top: 35px
         position: relative
-        transition: all .2s ease
+        transition: all 1s ease
         &:hover
             background-color: #4E5E60
         &:hover::after 
