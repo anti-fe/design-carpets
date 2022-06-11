@@ -1,5 +1,6 @@
 import slider from './slider.js';
 import animations from './animations.js';
+import accordion from './accordion.js';
 
 const burgerMenuBtn = document.querySelector('.burger-menu__close-btn'),
     burgerMenu = document.querySelector('.burger-menu');
@@ -15,3 +16,4 @@ window.addEventListener('scroll', (e)=>{
 })
 
 animations();
+accordion();
