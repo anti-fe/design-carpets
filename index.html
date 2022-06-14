@@ -21,15 +21,17 @@
                  CARPETS
             </a>
             <ul class="header__navbar-menu">
-                <li class="header__navbar-item"><a href="/pages/services" class="header__navbar-link">Услуги</a></li>
-                <li class="header__navbar-item"><a href="/pages/portfolio" class="header__navbar-link">Портфолио</a></li>
-                <li class="header__navbar-item"><a href="/pages/contacts" class="header__navbar-link">Контакты</a></li>
+              <li class="header__navbar-item"><a href="#about-us" class="header__navbar-link">О нас</a></li>
+              <li class="header__navbar-item"><a href="/pages/services" class="header__navbar-link">Услуги</a></li>
+              <li class="header__navbar-item"><a href="/pages/portfolio" class="header__navbar-link">Портфолио</a></li>
+              <li class="header__navbar-item"><a href="/pages/contacts" class="header__navbar-link">Контакты</a></li>
             </ul>
             <div class="burger-menu">
-                <ul class="burger-menu__list">
-                    <li class="burger-menu__item"><a href="/pages/services" class="burger-menu__link">Услуги</a></li>
-                    <li class="burger-menu__item"><a href="/pages/portfolio" class="burger-menu__link">Портфолио</a></li>
-                    <li class="burger-menu__item"><a href="/pages/contacts" class="burger-menu__link">Контакты</a></li>
+              <ul class="burger-menu__list">
+                  <li class="burger-menu__item"><a href="#about-us" class="burger-menu__link">О нас</a></li>
+                  <li class="burger-menu__item"><a href="/pages/services" class="burger-menu__link">Услуги</a></li>
+                  <li class="burger-menu__item"><a href="/pages/portfolio" class="burger-menu__link">Портфолио</a></li>
+                  <li class="burger-menu__item"><a href="/pages/contacts" class="burger-menu__link">Контакты</a></li>
                 </ul>
             </div>
             <div class="burger-menu__close-btn">
@@ -47,7 +49,7 @@
         </div>  
     </main>
     <!-- ABOUT US -->
-    <section class="about-us">
+    <section class="about-us" id="about-us">
         <div class="about-us__row">
             <div class="about-us__block">
                 <div class="about-us__empty-block"></div>
@@ -314,7 +316,50 @@
         </div>
       </div>
     </section>
-
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__content container">
+        <div class="footer__col">
+          <div class="footer__header">
+            <h4 class="footer__col-title">НАВИГАЦИЯ</h4>
+            <svg class="footer__col-arrow" width="20" height="20">
+              <use href="/images/icons.svg#arrow-icon" />
+            </svg>
+          </div>
+          <div class="footer__col-list">
+            <a href="#about-us" class="footer__col-item">О нас</a>
+            <a href="/pages/portfolio" class="footer__col-item">Портфолио</a>
+            <a href="/pages/services" class="footer__col-item">Услуги</a>
+            <a href="/pages/contacts" class="footer__col-item">Контакты</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__header">
+            <h4 class="footer__col-title">КОМПАНИЯ</h4>
+            <svg class="footer__col-arrow" width="20" height="20">
+              <use href="/images/icons.svg#arrow-icon" />
+            </svg>
+          </div>
+          <div class="footer__col-list">
+            <a href="#" class="footer__col-item">Дизайнерам</a>
+            <a href="#" class="footer__col-item">Клиенты</a>
+            <a href="#" class="footer__col-item">Партнеры</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__header">
+            <h4 class="footer__col-title">КОВРЫ</h4>
+            <svg class="footer__col-arrow" width="20" height="20">
+              <use href="/images/icons.svg#arrow-icon" />
+            </svg>
+          </div>
+          <div class="footer__col-list">
+            <a href="#" class="footer__col-item">Рекомендации по чистке и уходу</a>
+            <a href="#" class="footer__col-item">Правила эксплуатации</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- SWIPER JS -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
