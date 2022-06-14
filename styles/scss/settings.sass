@@ -26,6 +26,8 @@ body
     font-size: $fs-18
     scroll-behavior: smooth
     overflow-x: hidden
+    max-width: 3400px
+    margin: 0 auto
 h1,h2,h3,h4,h5 
     font-family: $ff-lighthaus
     font-weight: lighter
@@ -42,7 +44,7 @@ ul, ol
 .text-ambidexter
     font-family: $ff-ambidexter
 .section-title 
-    +section-title
+    +section-title 
     transition: all 1s ease
 .animBottom
     transform: translateY(50px)
@@ -50,3 +52,60 @@ ul, ol
 .animBottomNone
     transform: translateY(0px)
     opacity: 1   
+.form 
+    +flex(center,center,column)
+    max-width: 312px
+    width: 100%
+    &__input-box
+        width: 100%
+        position: relative
+        &:first-child
+            margin-bottom: 20px   
+    &__input 
+        +text($fs-22, $c-white, $ff-gilroy-l)
+        padding: 12px 0 12px 12px
+        outline: none 
+        background-color: transparent
+        border: 1px solid rgba(255, 255, 255, 0.15)
+        width: 100%
+        transition: all .3s ease
+        &:focus + .form__input-label
+            top: -12px
+            font-size: $fs-18
+    &__input-success
+        margin-top: 8px
+    &__input-label
+        +text($fs-22, #607173, $ff-gilroy-l)
+        cursor: text
+        user-select: none
+        background-color: $c-accent
+        padding: 2px 4px
+        transition: all .2s ease
+        position: absolute 
+        top: 12px
+        left: 12px
+    &__btn 
+        +btn-light
+        padding: 10px 0
+        font-size: $fs-18
+        width: 100%
+        margin-top: 40px
+        outline: none
+        position: relative
+        z-index: 0
+        transition: all .3s ease
+        &::after
+            content: ''
+            position: absolute 
+            left: 0
+            top: 0
+            background-color: $c-white
+            height: 0px
+            width: 100%
+            transition: all .3s ease
+            z-index: -1
+        &:hover::after
+            height: 100%
+        &:hover 
+            color: $c-black
+            

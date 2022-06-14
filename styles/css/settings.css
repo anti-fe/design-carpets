@@ -29,6 +29,8 @@ body {
   font-size: 18px;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  max-width: 3400px;
+  margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5 {
@@ -64,6 +66,13 @@ ul, ol {
   transition: all 1s ease;
 }
 
+@media (max-width: 564px) {
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
+}
+
 .animBottom {
   transform: translateY(50px);
   opacity: 0;
@@ -72,5 +81,98 @@ ul, ol {
 .animBottomNone {
   transform: translateY(0px);
   opacity: 1;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 312px;
+  width: 100%;
+}
+
+.form__input-box {
+  width: 100%;
+  position: relative;
+}
+
+.form__input-box:first-child {
+  margin-bottom: 20px;
+}
+
+.form__input {
+  font-size: 22px;
+  color: #fff;
+  font-family: "Gilroy Light";
+  padding: 12px 0 12px 12px;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  width: 100%;
+  transition: all .3s ease;
+}
+
+.form__input:focus + .form__input-label {
+  top: -12px;
+  font-size: 18px;
+}
+
+.form__input-success {
+  margin-top: 8px;
+}
+
+.form__input-label {
+  font-size: 22px;
+  color: #607173;
+  font-family: "Gilroy Light";
+  cursor: text;
+  user-select: none;
+  background-color: #445658;
+  padding: 2px 4px;
+  transition: all .2s ease;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.form__btn {
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Gilroy Light";
+  border: 1px solid #fff;
+  background-color: transparent;
+  width: 100%;
+  padding: 0 10px;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  width: 100%;
+  margin-top: 40px;
+  outline: none;
+  position: relative;
+  z-index: 0;
+  transition: all .3s ease;
+}
+
+.form__btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  height: 0px;
+  width: 100%;
+  transition: all .3s ease;
+  z-index: -1;
+}
+
+.form__btn:hover::after {
+  height: 100%;
+}
+
+.form__btn:hover {
+  color: #262626;
 }
 /*# sourceMappingURL=settings.css.map */

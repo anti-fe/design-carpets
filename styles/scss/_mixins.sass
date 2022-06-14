@@ -2,21 +2,21 @@
 
 //BUTTONS
 =btn-light
+    cursor: pointer
     color: $c-white
     font-size: $fs-18
     font-family: $ff-gilroy-l 
     border: 1px solid $c-white
-    background-color: $c-accent
-    max-width: 73px
+    background-color: transparent
     width: 100%
     padding: 0 10px
     text-align: center
 =btn-dark($fs, $width)
+    cursor: pointer
     color: $c-white
     font-size: $fs-18
     font-family: $ff-gilroy-l 
     background-color: $c-accent
-    max-width: 312px
     width: $width
     padding: 0 10px
     text-align: center
@@ -31,6 +31,9 @@
     color: $c-accent
     text-transform: uppercase
     margin-bottom: $m-title
+    @media (max-width: 564px)
+        font-size: $fs-28
+        margin-bottom: 50px
 // FLEX CONTAINER
 =flex($jc, $ai, $fd) 
     display: flex

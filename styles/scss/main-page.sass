@@ -52,7 +52,7 @@
             background-color: $c-white
             height: 2px
             width: 0 
-            transition: all .2s ease
+            transition: all .3s ease
 .about-us
     &__row
         width: 100% 
@@ -154,7 +154,6 @@
         width: 100%
         +flex(space-between, center, row)
         cursor: pointer
-        
         position: relative
         &::after
             counter-increment: accordItem 
@@ -167,11 +166,14 @@
             position: absolute
             left: 0
             +text($fs-36, $c-black, $ff-lighthaus)
+            @media (max-width: 564px)
+                font-size: $fs-26
+            
     &__item-name
         +text($fs-28, $c-black, $ff-lighthaus)
         margin-left: 117px
         @media (max-width: 564px)
-            font-size: $fs-22
+            font-size: $fs-18
             margin-left: 80px
             margin-right: 10px
     &__item-arrow
@@ -212,7 +214,46 @@
     &__item.steps__item_active &__item-arrow
         stroke: $c-accent
         transform: rotate(45deg)
-       
+.consultation 
+    margin-top: $m-section
+    &__title 
+        color: $c-accent
+    &__wrapper 
+        display: grid 
+        grid-template-columns: minmax(400px,794px) minmax(500px, 657px)
+        align-items: center
+        @media (max-width: 992px) 
+            grid-template-columns: 1fr
+    &__block
+        width: 100%
+        height: 100%
+    &__photo
+        object-fit: cover
+        max-width: 794px
+        width: 100%
+        height: 100%
+    &__form-title
+        color: $c-white
+        font-size: $fs-28
+        margin-bottom: 50px
+    &__block:last-child
+        +flex(center, center, column)
+        background-color: $c-accent
+        height: 95%
+        // min-height: 300px
+        padding: 110px 0 110px 0
+        max-width: 657px
+        @media (max-width: 992px) 
+           max-width: 700px
+           min-width: none
+           width: 100%
+    &__block:first-child 
+        @media (max-width: 992px) 
+            display: none
+
+
+
+
 @media (max-width: 992px)
     .steps__item.steps__item_active .steps__item-body
         max-height: 926px
