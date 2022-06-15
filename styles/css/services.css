@@ -1,0 +1,263 @@
+.main {
+  padding-top: 161px;
+}
+
+.main__title {
+  margin-bottom: 90px;
+}
+
+.main__cards-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1598px;
+  margin: 0 auto;
+}
+
+.main__card:first-child .main__card-info {
+  border-radius: 266px 0 0 0;
+}
+
+.main__card {
+  transition: all .3s ease;
+  min-height: 400px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.main__card::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  opacity: 0;
+  z-index: -1;
+  max-height: 533px;
+  height: 90%;
+  object-fit: contain;
+  transform: translateY(20px);
+  transition: all .3s ease;
+}
+
+.main__card::before {
+  content: '';
+  position: absolute;
+  z-index: 5;
+  left: 2%;
+  top: 45%;
+  transition: all .3s ease;
+  font-size: 64px;
+  color: #262626;
+  font-family: "Lighthaus";
+}
+
+@media (max-width: 992px) {
+  .main__card::before {
+    font-size: 28px;
+  }
+}
+
+.main__card:first-child::after {
+  background: url("/images/services-photos/services1.png");
+  background-repeat: no-repeat;
+}
+
+.main__card:first-child::before {
+  content: '1.';
+}
+
+.main__card:nth-child(2)::after {
+  background: url("/images/services-photos/services2.png");
+  background-repeat: no-repeat;
+}
+
+.main__card:nth-child(2)::before {
+  content: '2.';
+}
+
+.main__card:last-child::after {
+  background: url("/images/services-photos/services3.png");
+  background-repeat: no-repeat;
+}
+
+.main__card:last-child::before {
+  content: '3.';
+}
+
+.main__card:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.main__card:hover.main__card::after {
+  width: 804px;
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .main__card:hover.main__card::after {
+    width: 100%;
+  }
+}
+
+.main__card:hover.main__card::before {
+  font-size: 26px;
+  top: 5%;
+}
+
+.main__card:hover .main__card-info {
+  transform: translateX(-50%);
+  border-radius: 0 0 0 0;
+}
+
+@media (max-width: 1487px) {
+  .main__card:hover .main__card-info {
+    transform: translateX(-40%);
+  }
+}
+
+@media (max-width: 1315px) {
+  .main__card:hover .main__card-info {
+    transform: translateX(-30%);
+  }
+}
+
+@media (max-width: 1150px) {
+  .main__card:hover .main__card-info {
+    transform: translateX(-20%);
+  }
+}
+
+@media (max-width: 992px) {
+  .main__card:hover .main__card-info {
+    transform: translateX(-10%);
+  }
+}
+
+@media (max-width: 768px) {
+  .main__card:hover .main__card-info {
+    transform: translateX(0%);
+  }
+}
+
+.main__card:hover .main__card-btn {
+  opacity: 1;
+  user-select: auto;
+  pointer-events: auto;
+  margin-top: 30px;
+}
+
+.main__card-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(251, 251, 251, 0.8);
+  backdrop-filter: blur(35px);
+  padding: 75px;
+  transition: all .3s ease;
+  max-width: 794px;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .main__card-info {
+    backdrop-filter: blur(10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .main__card-info {
+    backdrop-filter: blur(5px);
+  }
+}
+
+.main__card-title {
+  font-size: 28px;
+  color: #445658;
+  font-family: "Lighthaus";
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .main__card-title {
+    font-size: 26px;
+  }
+}
+
+.main__card-descr {
+  font-size: 22px;
+  color: #262626;
+  font-family: "Gilroy Light";
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .main__card-descr {
+    font-size: 18px;
+  }
+}
+
+.main__card-btn {
+  font-size: 18px;
+  color: #fff;
+  font-family: "Gilroy Light";
+  cursor: pointer;
+  background-color: #445658;
+  text-align: center;
+  border-radius: 0px 0px 30px 0px;
+  transition: all .3s ease;
+  padding: 10px 25px;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 0;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+@media (max-width: 992px) {
+  .main__card-btn {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main__card-btn {
+    opacity: 1;
+    user-select: auto;
+    pointer-events: auto;
+    margin-top: 30px;
+  }
+}
+
+.main__card-btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #FBFBFB;
+  height: 100%;
+  width: 0;
+  transition: all .3s ease;
+  border-radius: 0px 0px 30px 0px;
+  z-index: -1;
+}
+
+.main__card-btn:hover::after {
+  width: 100%;
+}
+
+.main__card-btn:hover {
+  color: #262626;
+  border: 1px solid #445658;
+}
+/*# sourceMappingURL=services.css.map */

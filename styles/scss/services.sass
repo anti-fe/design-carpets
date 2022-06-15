@@ -1,0 +1,145 @@
+@import 'vars'
+@import 'mixins'
+
+.main 
+    padding-top: 161px 
+    &__title
+        margin-bottom: $m-title
+    &__cards-list 
+        +flex(center,center,column)
+        max-width: 1598px
+        margin: 0 auto
+    &__card:first-child &__card-info
+        border-radius: 266px 0 0 0
+    &__card 
+        transition: all .3s ease
+        min-height: 400px
+        width: 100%
+        position: relative
+        +flex(center,center,row)
+        &::after 
+            content: ''
+            position: absolute 
+            right: 0
+            top: 0
+            width: 1px
+            opacity: 0
+            z-index: -1
+            max-height: 533px
+            height: 90%
+            object-fit: contain
+            transform: translateY(20px)
+            transition: all .3s ease 
+        &::before
+            content: ''
+            position: absolute 
+            z-index: 5
+            left: 2%
+            top: 45%
+            transition: all .3s ease
+            +text($fs-64, $c-black, $ff-lighthaus)
+            @media (max-width: 992px)
+                font-size: $fs-28
+        &:first-child::after
+            background: url('/images/services-photos/services1.png')
+            background-repeat: no-repeat
+        &:first-child::before
+            content: '1.'
+        &:nth-child(2)::after
+            background: url('/images/services-photos/services2.png')
+            background-repeat: no-repeat
+        &:nth-child(2)::before
+            content: '2.'
+        &:last-child::after
+            background: url('/images/services-photos/services3.png')
+            background-repeat: no-repeat
+        &:last-child::before
+            content: '3.'
+        &:not(:last-child) 
+            margin-bottom: 10px
+        &:hover.main__card::after
+            width: 804px
+            opacity: 1
+            @media (max-width: 992px)
+                width: 100%
+        &:hover.main__card::before 
+            font-size: 26px
+            top: 5%
+        &:hover &-info
+            transform: translateX(-50%) 
+            border-radius: 0 0 0 0
+            @media (max-width:1487px)
+                transform: translateX(-40%)
+            @media (max-width:1315px)
+                transform: translateX(-30%)
+            @media (max-width:1150px)
+                transform: translateX(-20%)
+            @media (max-width:992px)
+                transform: translateX(-10%)
+            @media (max-width:768px)
+                transform: translateX(0%)
+        &:hover &-btn 
+            opacity: 1 
+            user-select: auto 
+            pointer-events: auto
+            margin-top: 30px     
+    &__card-info
+        +flex(center, center, column)
+        background-color: rgba(251, 251, 251, 0.8)
+        backdrop-filter: blur(35px)
+        padding: 75px
+        transition: all .3s ease
+        max-width: 794px
+        width: 100%
+        @media (max-width: 992px)
+            backdrop-filter: blur(10px)
+        @media (max-width: 768px)
+            backdrop-filter: blur(5px)
+    &__card-title 
+        +text($fs-28, $c-accent, $ff-lighthaus)
+        margin-bottom: 30px
+        text-transform: uppercase
+        text-align: center
+        @media (max-width:992px)
+            font-size: $fs-26
+    &__card-descr
+        +text($fs-22, $c-black, $ff-gilroy-l)
+        text-align: center
+        @media (max-width:992px)
+            font-size: $fs-18
+    &__card-btn 
+        +text(18px, $c-white, $ff-gilroy-l)
+        +btn-dark
+        background-color: 
+        transition: all .3s ease
+        padding: 10px 25px
+        border: none
+        outline: none
+        position: relative
+        z-index: 0
+        opacity: 0
+        user-select: none 
+        pointer-events: none
+        @media (max-width:992px)
+            font-size: 16px
+        @media (max-width: 768px)
+            opacity: 1
+            user-select: auto 
+            pointer-events: auto  
+            margin-top: 30px   
+        &::after
+            content: ''
+            position: absolute 
+            left: 0
+            top: 0
+            background-color: $c-lightgray
+            height: 100%
+            width: 0
+            transition: all .3s ease
+            border-radius: 0px 0px 30px 0px
+            z-index: -1
+        &:hover::after
+            width: 100%
+        &:hover 
+            color: $c-black
+            border: 1px solid $c-accent

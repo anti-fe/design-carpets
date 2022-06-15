@@ -29,11 +29,17 @@ allInputs.forEach(item => {
         item.classList.remove('form__input_focus');
     })
 })
+console.log(window.location.pathname);
 
-//Анимация главного экрана 
-animations();
-//Steps accordion
-accordion();
+
+
+if(window.location.pathname == '/') {
+    //Анимация главного экрана 
+    animations();
+    //Steps accordion
+    accordion();
+}
+
 // Footer accordion
 footerCont.addEventListener('click', (e) => {
     if(e.target.closest('.footer__header')) {
@@ -41,7 +47,7 @@ footerCont.addEventListener('click', (e) => {
     }
 })
 //Validation forms
-formBtn.addEventListener('click', (e)=>{
-    e.preventDefault();
-    validationForm(e)
-})
+// formBtn.addEventListener('click', (e)=>{
+//     e.preventDefault();
+//     validationForm(e)
+// })
