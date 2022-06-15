@@ -33,7 +33,7 @@ console.log(window.location.pathname);
 
 
 
-if(window.location.pathname == '/') {
+if(window.location.pathname == '/' || window.location.pathname == '/index.html') {
     //Анимация главного экрана 
     animations();
     //Steps accordion
@@ -46,7 +46,7 @@ footerCont.addEventListener('click', (e) => {
         footer(e, footerColls);
     }
 })
-// Validation forms
+//  
 formBtn.addEventListener('click', (e)=>{
     e.preventDefault();
     validationForm(e)
