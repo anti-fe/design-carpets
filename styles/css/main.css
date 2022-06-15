@@ -108,7 +108,7 @@
 }
 
 .burger-menu_active {
-  transform: translateY(131px);
+  transform: translateY(115px);
   opacity: 1;
 }
 

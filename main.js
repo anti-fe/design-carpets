@@ -46,8 +46,8 @@ footerCont.addEventListener('click', (e) => {
         footer(e, footerColls);
     }
 })
-//Validation forms
-// formBtn.addEventListener('click', (e)=>{
-//     e.preventDefault();
-//     validationForm(e)
-// })
+// Validation forms
+formBtn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    validationForm(e)
+})
