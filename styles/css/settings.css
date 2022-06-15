@@ -112,6 +112,12 @@ ul, ol {
   border: 1px solid rgba(255, 255, 255, 0.15);
   width: 100%;
   transition: all .3s ease;
+  z-index: 5;
+}
+
+.form__input:-webkit-autofill, .form__input:-webkit-autofill:hover, .form__input:-webkit-autofill:focus, .form__input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important;
 }
 
 .form__input:focus + .form__input-label {
@@ -119,8 +125,10 @@ ul, ol {
   font-size: 18px;
 }
 
-.form__input-success {
+.form__input-error {
   margin-top: 8px;
+  color: #e74c3c;
+  font-size: 16px;
 }
 
 .form__input-label {
@@ -147,6 +155,7 @@ ul, ol {
   width: 100%;
   padding: 0 10px;
   text-align: center;
+  border-radius: 0px 0px 30px 0px;
   padding: 10px 0;
   font-size: 18px;
   width: 100%;
@@ -163,14 +172,15 @@ ul, ol {
   left: 0;
   top: 0;
   background-color: #fff;
-  height: 0px;
-  width: 100%;
+  height: 100%;
+  width: 0;
   transition: all .3s ease;
+  border-radius: 0px 0px 30px 0px;
   z-index: -1;
 }
 
 .form__btn:hover::after {
-  height: 100%;
+  width: 100%;
 }
 
 .form__btn:hover {

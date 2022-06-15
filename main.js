@@ -1,7 +1,8 @@
-import slider from './slider.js';
-import animations from './animations.js';
-import accordion from './accordion.js';
-import footer from './footer.js';
+import slider from './scripts/slider.js';
+import animations from './scripts/animations.js';
+import accordion from './scripts/accordion.js';
+import footer from './scripts/footer.js';
+import validationForm from './scripts/validationForm.js';
 
 const burgerMenuBtn = document.querySelector('.burger-menu__close-btn'),
     burgerMenu = document.querySelector('.burger-menu');
@@ -9,6 +10,7 @@ const header = document.querySelector('.header');
 const allInputs = document.querySelectorAll('input');
 const footerCont = document.querySelector('.footer');
 const footerColls = document.querySelectorAll('.footer__col');
+const formBtn = document.querySelector('.form__btn')
 
 //Открытие бургер меню
 burgerMenuBtn.addEventListener('click', ()=>{
@@ -28,11 +30,18 @@ allInputs.forEach(item => {
     })
 })
 
+//Анимация главного экрана 
 animations();
+//Steps accordion
 accordion();
 // Footer accordion
 footerCont.addEventListener('click', (e) => {
     if(e.target.closest('.footer__header')) {
         footer(e, footerColls);
     }
+})
+//Validation forms
+formBtn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    validationForm(e)
 })
