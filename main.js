@@ -33,7 +33,10 @@ console.log(window.location.pathname);
 
 
 
-if(window.location.pathname == '/' || window.location.pathname == '/index.html') {
+if(window.location.pathname == '/' ||
+ window.location.pathname == '/index.html' ||
+  window.location.pathname == '/design-carpets/' || 
+  window.location.pathname == '/design-carpets/index.html') {
     //Анимация главного экрана 
     animations();
     //Steps accordion
