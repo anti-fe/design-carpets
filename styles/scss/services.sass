@@ -11,6 +11,8 @@
         margin: 0 auto
     &__card:first-child &__card-info
         border-radius: 266px 0 0 0
+        @media (max-width: 564px)
+            border-radius: 0 0 0 0
     &__card 
         transition: all .3s ease
         min-height: 400px
@@ -45,23 +47,27 @@
             background-repeat: no-repeat
         &:first-child::before
             content: '1.'
+            @media (max-width: 992px)
+                top: 5%
         &:nth-child(2)::after
             background: url('../../images/services-photos/services2.webp')
             background-repeat: no-repeat
         &:nth-child(2)::before
             content: '2.'
+            @media (max-width: 992px)
+                top: 5%
         &:last-child::after
             background: url('../../images/services-photos/services3.webp')
             background-repeat: no-repeat
         &:last-child::before
             content: '3.'
+            @media (max-width: 992px)
+                top: 5%
         &:not(:last-child) 
             margin-bottom: 10px
         &:hover.main__card::after
             width: 804px
             opacity: 1
-            @media (max-width: 992px)
-                width: 100%
         &:hover.main__card::before 
             font-size: 26px
             top: 5%
@@ -95,6 +101,10 @@
             backdrop-filter: blur(10px)
         @media (max-width: 768px)
             backdrop-filter: blur(5px)
+        @media (max-width: 564px)
+            padding: 15px
+            padding-top: 70px
+            padding-bottom: 70px
     &__card-title 
         +text($fs-28, $c-accent, $ff-lighthaus)
         margin-bottom: 30px

@@ -123,6 +123,11 @@ ul, ol {
 .form__input:focus + .form__input-label {
   top: -12px;
   font-size: 18px;
+  color: #fff;
+}
+
+.form__input:focus {
+  border-color: #fff;
 }
 
 .form__input-error {
