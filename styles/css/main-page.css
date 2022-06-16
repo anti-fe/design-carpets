@@ -305,6 +305,12 @@
   position: relative;
 }
 
+@media (max-width: 564px) {
+  .steps__item-header {
+    height: 50px;
+  }
+}
+
 .steps__item-header::after {
   counter-increment: accordItem;
   content: counter(accordItem) ".";

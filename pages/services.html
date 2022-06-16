@@ -1,131 +1,182 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS -->
-    <link rel="stylesheet" href="../styles/css/settings.css">
-    <link rel="stylesheet" href="../styles/css/main.css">
-    <link rel="stylesheet" href="../styles/css/services.css">
-    <!-- SWIPER CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <!-- TITLE -->
-    <title>Design Carpets - Главная страница</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../styles/css/settings.css">
+  <link rel="stylesheet" href="../styles/css/main.css">
+  <link rel="stylesheet" href="../styles/css/services.css">
+  <!-- SWIPER CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <!-- TITLE -->
+  <title>Design Carpets - Главная страница</title>
 </head>
+
 <body>
-    <header class="header">
-        <nav class="header__navbar container">
-            <a href="/" class="header__link header__logo">
-                <span class="text-ambidexter">DESIGN</span>
-                 CARPETS
-            </a>
-            <ul class="header__navbar-menu">
-              <li class="header__navbar-item"><a href="./services.html" class="header__navbar-link">Услуги</a></li>
-              <li class="header__navbar-item"><a href="./portfolio.html" class="header__navbar-link">Портфолио</a></li>
-              <li class="header__navbar-item"><a href="./contacts.html" class="header__navbar-link">Контакты</a></li>
-            </ul>
-            <div class="burger-menu">
-              <ul class="burger-menu__list">
-                  <li class="burger-menu__item"><a href="./services.html" class="burger-menu__link">Услуги</a></li>
-                  <li class="burger-menu__item"><a href="./portfolio.html" class="burger-menu__link">Портфолио</a></li>
-                  <li class="burger-menu__item"><a href="./contacts.html" class="burger-menu__link">Контакты</a></li>
-                </ul>
-            </div>
-            <div class="burger-menu__close-btn">
-                <span class="burger-menu__line"></span>
-                <span class="burger-menu__line"></span>
-                <span class="burger-menu__line"></span>
-            </div> 
-        </nav>
-    </header>
-    <!-- MAIN -->
-    <main class="main">
-      <h2 class="main__title section-title container">ПРЕДОСТАВЛЯЕМЫЕ УСЛУГИ</h2>
-      <div class="main__cards-list">
-
-        <div class="main__card">
-          <div class="main__card-info">
-            <h3 class="main__card-title">ПОДБОР КОВРОВ</h3>
-            <p class="main__card-descr">Компания Design Carpets оказывает максимальную
-              клиентскую поддержку при подборе ковров. Профессиональный менеджер поможет
-              сориентироваться в ассортименте и ценах, а дизайнер подскажет, какой ковер
-              лучше всего подойдет именно для вашего интерьера.</p>
-            <button class='main__card-btn'>Подобрать ковёр</button>
+  <!-- MODAL-WINDOW -->
+  <div class="bg-modal">
+    <div class="modal-window">
+      <div class="modal-window__wrapper">
+        <img src="../images/form.png" alt="form" class="modal-window__photo">
+        <form class="modal-window__form form">
+          <h3 class="modal-window__form-title">Форма обратой связи</h3>
+          <div class="form__input-box">
+            <input type="text" id="input-name2" class="form__name form__input" required>
+            <label for="input-name2" class="form__input-label">Введите имя</label>
+            <p class="form__input-error"></p>
           </div>
-        </div>
-        <div class="main__card">
-          <div class="main__card-info">
-            <h3 class="main__card-title">ПРИМЕРКА И ДОСТАВКА</h3>
-            <p class="main__card-descr">Компания Design Carpets предоставляет примерку ковров. 
-              Мы организуем бесплатную презентацию любого количества ковров по вашему 
-              запросу. Мы проводим примерку ковров в любом городе. Организуем доставку 
-              купленного ковра в любую точку мира.</p>
-            <button class='main__card-btn'>Заказать примерку</button>
+          <div class="form__input-box">
+            <input type="tel" id="input-phone2" class="form__phone form__input" required>
+            <label for="input-phone2" class="form__input-label">Введите номер телефона</label>
+            <p class="form__input-error"></p>
           </div>
-        </div>
-        <div class="main__card">
-          <div class="main__card-info">
-            <h3 class="main__card-title">УХОД И РЕСТАВРАЦИЯ</h3>
-            <p class="main__card-descr">Мы организовали собственный сервис по уходу и
-              реставрации. С помощью специального оборудования и деликатных моющих
-              составов мы очищаем любые загрязнения с поверхности ковров, возвращая
-              им прежний вид. Наши специалисты смогут справиться и с механическими
-              повреждениями, обеспечивая коврам долгую и красивую жизнь.</p>
-            <button class='main__card-btn'>Заказать очистку</button>
-          </div>
-        </div>
-
+          <button class="modal-window__btn">Отправить</button>
+        </form>
       </div>
-    </main>
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer__content container">
-        <div class="footer__col">
-          <div class="footer__header">
-            <h4 class="footer__col-title">НАВИГАЦИЯ</h4>
-            <svg class="footer__col-arrow" width="20" height="20">
-              <use href="../images/icons.svg#arrow-icon" />
-            </svg>
-          </div>
-          <div class="footer__col-list">
-            <a href="./portfolio.html" class="footer__col-item">Портфолио</a>
-            <a href="./services.html" class="footer__col-item">Услуги</a>
-            <a href="./contacts.html" class="footer__col-item">Контакты</a>
-          </div>
-        </div>
-        <div class="footer__col">
-          <div class="footer__header">
-            <h4 class="footer__col-title">КОМПАНИЯ</h4>
-            <svg class="footer__col-arrow" width="20" height="20">
-              <use href="../images/icons.svg#arrow-icon" />
-            </svg>
-          </div>
-          <div class="footer__col-list">
-            <a href="../index.html#about.html" class="footer__col-item">О нас</a>
-            <a href="#" class="footer__col-item">Дизайнерам</a>
-            <a href="#" class="footer__col-item">Клиенты</a>
-            <a href="#" class="footer__col-item">Партнеры</a>
-          </div>
-        </div>
-        <div class="footer__col">
-          <div class="footer__header">
-            <h4 class="footer__col-title">КОВРЫ</h4>
-            <svg class="footer__col-arrow" width="20" height="20">
-              <use href="../images/icons.svg#arrow-icon" />
-            </svg>
-          </div>
-          <div class="footer__col-list">
-            <a href="#" class="footer__col-item">Рекомендации по чистке и уходу</a>
-            <a href="#" class="footer__col-item">Правила эксплуатации</a>
-          </div>
+    </div>
+  </div>
+  <!-- HEDER -->
+  <header class="header">
+    <nav class="header__navbar container">
+      <a href="/" class="header__link header__logo">
+        <span class="text-ambidexter">DESIGN</span>
+        CARPETS
+      </a>
+      <ul class="header__navbar-menu">
+        <li class="header__navbar-item"><a href="./services.html" class="header__navbar-link">Услуги</a></li>
+        <li class="header__navbar-item"><a href="./portfolio.html" class="header__navbar-link">Портфолио</a></li>
+        <li class="header__navbar-item"><a href="./contacts.html" class="header__navbar-link">Контакты</a></li>
+      </ul>
+      <div class="burger-menu">
+        <ul class="burger-menu__list">
+          <li class="burger-menu__item"><a href="./services.html" class="burger-menu__link">Услуги</a></li>
+          <li class="burger-menu__item"><a href="./portfolio.html" class="burger-menu__link">Портфолио</a></li>
+          <li class="burger-menu__item"><a href="./contacts.html" class="burger-menu__link">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="burger-menu__close-btn">
+        <span class="burger-menu__line"></span>
+        <span class="burger-menu__line"></span>
+        <span class="burger-menu__line"></span>
+      </div>
+    </nav>
+  </header>
+  <!-- MAIN -->
+  <main class="main">
+    <h2 class="main__title section-title container">ПРЕДОСТАВЛЯЕМЫЕ УСЛУГИ</h2>
+    <div class="main__cards-list">
+
+      <div class="main__card">
+        <div class="main__card-info">
+          <h3 class="main__card-title">ПОДБОР КОВРОВ</h3>
+          <p class="main__card-descr">Компания Design Carpets оказывает максимальную
+            клиентскую поддержку при подборе ковров. Профессиональный менеджер поможет
+            сориентироваться в ассортименте и ценах, а дизайнер подскажет, какой ковер
+            лучше всего подойдет именно для вашего интерьера.</p>
+          <button class='main__card-btn'>Подобрать ковёр</button>
         </div>
       </div>
-    </footer>
+      <div class="main__card">
+        <div class="main__card-info">
+          <h3 class="main__card-title">ПРИМЕРКА И ДОСТАВКА</h3>
+          <p class="main__card-descr">Компания Design Carpets предоставляет примерку ковров.
+            Мы организуем бесплатную презентацию любого количества ковров по вашему
+            запросу. Мы проводим примерку ковров в любом городе. Организуем доставку
+            купленного ковра в любую точку мира.</p>
+          <button class='main__card-btn'>Заказать примерку</button>
+        </div>
+      </div>
+      <div class="main__card">
+        <div class="main__card-info">
+          <h3 class="main__card-title">УХОД И РЕСТАВРАЦИЯ</h3>
+          <p class="main__card-descr">Мы организовали собственный сервис по уходу и
+            реставрации. С помощью специального оборудования и деликатных моющих
+            составов мы очищаем любые загрязнения с поверхности ковров, возвращая
+            им прежний вид. Наши специалисты смогут справиться и с механическими
+            повреждениями, обеспечивая коврам долгую и красивую жизнь.</p>
+          <button class='main__card-btn'>Заказать очистку</button>
+        </div>
+      </div>
 
-    <!-- SWIPER JS -->
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <!-- JS -->
-    <script type="module" src="../main.js"></script>
+    </div>
+  </main>
+  <!-- CONSULTATION FORM -->
+  <section class="consultation">
+    <h2 class="consultation__title section-title container">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</h2>
+    <div class="consultation__wrapper">
+      <div class="consultation__block">
+        <img class="consultation__photo" src="../images/Consultation.png" alt="consultation-photo">
+      </div>
+      <div class="consultation__block">
+        <h3 class="consultation__form-title"><span class="text-ambidexter">DESIGN</span> CARPETS</h3>
+        <form class="consultation__form form">
+          <div class="form__input-box">
+            <input type="text" id="input-name" class="form__name form__input" required>
+            <label for="input-name" class="form__input-label">Введите имя</label>
+            <p class="form__input-error"></p>
+          </div>
+          <div class="form__input-box">
+            <input type="tel" id="input-phone" class="form__phone form__input" required>
+            <label for="input-phone" class="form__input-label">Введите номер телефона</label>
+            <p class="form__input-error"></p>
+          </div>
+          <button class="form__btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__content container">
+      <div class="footer__col">
+        <div class="footer__header">
+          <h4 class="footer__col-title">НАВИГАЦИЯ</h4>
+          <svg class="footer__col-arrow" width="20" height="20">
+            <use href="../images/icons.svg#arrow-icon" />
+          </svg>
+        </div>
+        <div class="footer__col-list">
+          <a href="./portfolio.html" class="footer__col-item">Портфолио</a>
+          <a href="./services.html" class="footer__col-item">Услуги</a>
+          <a href="./contacts.html" class="footer__col-item">Контакты</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <div class="footer__header">
+          <h4 class="footer__col-title">КОМПАНИЯ</h4>
+          <svg class="footer__col-arrow" width="20" height="20">
+            <use href="../images/icons.svg#arrow-icon" />
+          </svg>
+        </div>
+        <div class="footer__col-list">
+          <a href="../index.html#about.html" class="footer__col-item">О нас</a>
+          <a href="#" class="footer__col-item">Дизайнерам</a>
+          <a href="#" class="footer__col-item">Клиенты</a>
+          <a href="#" class="footer__col-item">Партнеры</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <div class="footer__header">
+          <h4 class="footer__col-title">КОВРЫ</h4>
+          <svg class="footer__col-arrow" width="20" height="20">
+            <use href="../images/icons.svg#arrow-icon" />
+          </svg>
+        </div>
+        <div class="footer__col-list">
+          <a href="#" class="footer__col-item">Рекомендации по чистке и уходу</a>
+          <a href="#" class="footer__col-item">Правила эксплуатации</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SWIPER JS -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <!-- JS -->
+  <script type="module" src="../main.js"></script>
 </body>
+
 </html>

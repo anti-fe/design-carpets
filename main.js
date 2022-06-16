@@ -3,15 +3,22 @@ import animations from './scripts/animations.js';
 import accordion from './scripts/accordion.js';
 import footer from './scripts/footer.js';
 import validationForm from './scripts/validationForm.js';
+import modalWindow from './scripts/modalWindow.js';
 
 const burgerMenuBtn = document.querySelector('.burger-menu__close-btn'),
-burgerMenu = document.querySelector('.burger-menu');
+    burgerMenu = document.querySelector('.burger-menu');
 const header = document.querySelector('.header');
+
 const allInputs = document.querySelectorAll('input');
+
 const footerCont = document.querySelector('.footer');
 const footerColls = document.querySelectorAll('.footer__col');
 const formBtn = document.querySelector('.form__btn');
+
 const logo = document.querySelector('.header__logo');
+
+const servicesCont = document.querySelector('.main__cards-list');
+
 let localHost;
 
 //Узнаем localHost или нет
@@ -70,8 +77,14 @@ footerCont.addEventListener('click', (e) => {
     }
 })
 //Валидация формы
-formBtn.addEventListener('click', (e)=>{
+formBtn.addEventListener('click', (e) => {
     e.preventDefault();
     validationForm(e)
 })
-
+//Модальное окно
+servicesCont.addEventListener('click', (e) => {
+    e.preventDefault();
+    if(e.target.classList.contains('main__card-btn')) {
+        modalWindow();
+    }
+})

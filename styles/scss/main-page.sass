@@ -169,6 +169,8 @@
         +flex(space-between, center, row)
         cursor: pointer
         position: relative
+        @media (max-width: 564px)
+                height: 50px
         &::after
             counter-increment: accordItem 
             content: counter(accordItem) '.'

@@ -1,8 +1,8 @@
 export default function validationForm(e) {
     const btn = e.target;
 
-    const nameInput = btn.parentElement.querySelector('#input-name'),
-        phoneInput = btn.parentElement.querySelector('#input-phone');
+    const nameInput = btn.parentElement.querySelector('input[type="text"]'),
+        phoneInput = btn.parentElement.querySelector('input[type="tel"]');
     //RegEx
     const regExName = /^[A-Za-zА-Яа-я ,.'-]+$/,
         regExPhone = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
@@ -35,7 +35,7 @@ export default function validationForm(e) {
         error.innerHTML = '';
     }
     //Если ошибок нет
-    const allErrors = document.querySelectorAll('.form__input-error');
+    const allErrors = btn.parentElement.querySelectorAll('.form__input-error');
     if(allErrors[0].innerHTML === '' && allErrors[1].innerHTML === '') {
         setTimeout(()=>{window.location.reload()}, 1000);
     }

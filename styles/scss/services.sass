@@ -153,3 +153,137 @@
         &:hover 
             color: $c-black
             border: 1px solid $c-accent
+.consultation 
+    margin-top: $m-section
+    &__title 
+        color: $c-accent
+    &__wrapper 
+        display: grid 
+        grid-template-columns: minmax(400px,500px) minmax(500px, 930px)
+        align-items: center
+        position: relative
+        @media (max-width: 1290px)
+            grid-template-columns: minmax(320px, 330px) minmax(500px, 1025px)
+        @media (max-width: 992px) 
+            grid-template-columns: 1fr
+    &__block
+        width: 100%
+        height: 100%
+    &__photo
+        object-fit: cover
+        max-width: 794px
+        width: 100%
+        height: 100%
+        border-radius: 0px 280px 0px 0px
+        position: absolute
+        @media (max-width: 1290px)
+            max-width: 620px
+    &__form-title
+        color: $c-white
+        font-size: $fs-28
+        margin-bottom: 50px
+    &__block:last-child
+        +flex(center, center, column)
+        background-color: $c-accent
+        height: 95%
+        // min-height: 300px
+        padding: 110px 0 110px 290px
+        max-width: 930px
+        @media (max-width: 992px) 
+           max-width: 700px
+           min-width: none
+           width: 100%
+        @media (max-width: 992px) 
+            padding: 110px 0 110px 0px
+    &__block:first-child 
+        @media (max-width: 992px) 
+            display: none
+.bg-modal
+    background-color: rgba(0, 0, 0, 0.5)
+    width: 100%
+    height: 100%
+    position: fixed 
+    z-index: 999
+    top: 0
+    left: 0
+    display: grid 
+    place-items: center
+    user-select: none
+    pointer-events: none 
+    opacity: 0
+    transition: all .3s ease
+    &.bg-modal_active 
+        user-select: auto
+        pointer-events: auto 
+        opacity: 1
+.modal-window
+    max-width: 724px
+    max-height: 400px
+    width: 100%
+    height: 100%
+    position: relative
+    display: grid 
+    place-items: center
+    @media (max-width: 768px) 
+        padding: 0 10px
+    &__wrapper
+        background-color: $c-accent
+        height: 380px
+        width: 100%
+        display: grid 
+        place-items: center
+    &__photo
+        position: absolute 
+        left: 0
+        top: 0
+        height: 100%
+        border-radius: 0 126px 0 0
+        @media (max-width: 768px) 
+            display: none
+    &__form 
+        margin-left: 264px
+        @media (max-width: 768px) 
+            margin-left: 0 
+    &__form-title
+        +text($fs-22, $c-white, $ff-gilroy-l)
+        margin-bottom: 40px
+    &__btn 
+        +btn-light
+        padding: 10px 0
+        font-size: $fs-18
+        width: 100%
+        margin-top: 25px
+        outline: none
+        position: relative
+        z-index: 0
+        transition: all .3s ease
+        &::after
+            content: ''
+            position: absolute 
+            left: 0
+            top: 0
+            background-color: $c-white
+            height: 100%
+            width: 0
+            transition: all .3s ease
+            border-radius: 0px 0px 30px 0px
+            z-index: -1
+        &:hover::after
+            width: 100%
+        &:hover 
+            color: $c-black
+    .form 
+        @media (max-width: 564px)
+            max-width: 250px
+        &__input-box:not(:last-child) 
+            margin-bottom: 10px
+        &__input, .form__input-label
+            @media (max-width: 564px)
+                font-size: 18px
+        &__btn 
+            margin-top: 25px
+        &__input-error
+            @media (max-width: 564px)
+                font-size: 14px
+
+    
