@@ -2,7 +2,7 @@
 @import 'mixins'
 
 .main 
-    background-image: url('/images/bg-first-screen.png') 
+    background-image: url('../../images/bg-first-screen.png') 
     background-repeat: no-repeat
     background-position: top
     background-size: cover
@@ -34,8 +34,10 @@
         @media (max-width: 400px) 
             font-size: $fs-28
     &__btn
-        +btn-dark(22px, 190px)
-        padding: 10px 0
+        +btn-dark
+        font-size: $fs-22
+        padding: 10px 47px
+        color: $c-white
         margin-top: 35px
         position: relative
         transition: all 1s ease

@@ -64,7 +64,7 @@
 }
 
 .main__card:first-child::after {
-  background: url("/images/services-photos/services1.png");
+  background: url("../../images/services-photos/services1.webp");
   background-repeat: no-repeat;
 }
 
@@ -73,7 +73,7 @@
 }
 
 .main__card:nth-child(2)::after {
-  background: url("/images/services-photos/services2.png");
+  background: url("../../images/services-photos/services2.webp");
   background-repeat: no-repeat;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .main__card:last-child::after {
-  background: url("/images/services-photos/services3.png");
+  background: url("../../images/services-photos/services3.webp");
   background-repeat: no-repeat;
 }
 
