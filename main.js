@@ -5,12 +5,32 @@ import footer from './scripts/footer.js';
 import validationForm from './scripts/validationForm.js';
 
 const burgerMenuBtn = document.querySelector('.burger-menu__close-btn'),
-    burgerMenu = document.querySelector('.burger-menu');
+burgerMenu = document.querySelector('.burger-menu');
 const header = document.querySelector('.header');
 const allInputs = document.querySelectorAll('input');
 const footerCont = document.querySelector('.footer');
 const footerColls = document.querySelectorAll('.footer__col');
-const formBtn = document.querySelector('.form__btn')
+const formBtn = document.querySelector('.form__btn');
+const logo = document.querySelector('.header__logo');
+let localHost;
+
+//Узнаем localHost или нет
+if (["localhost", "127.0.0.1", ""].includes(window.location.hostname)) {
+    localHost = true;
+} else {localHost = false}
+
+//Переход на главную страницу 
+if(localHost == false) {
+    logo.addEventListener('click', (e)=>{
+        e.preventDefault();
+        window.location.pathname = '/design-carpets/';
+    })
+} else if(localHost == true) {
+    logo.addEventListener('click', (e)=>{
+        e.preventDefault();
+        window.location.pathname = '/';
+    })
+}
 
 //Открытие бургер меню
 burgerMenuBtn.addEventListener('click', ()=>{
@@ -34,9 +54,9 @@ console.log(window.location.pathname);
 
 
 if(window.location.pathname == '/' ||
- window.location.pathname == '/index.html' ||
-  window.location.pathname == '/design-carpets/' || 
-  window.location.pathname == '/design-carpets/index.html') {
+window.location.pathname == '/index.html' ||
+window.location.pathname == '/design-carpets/' || 
+window.location.pathname == '/design-carpets/index.html') {
     //Анимация главного экрана 
     animations();
     //Steps accordion
@@ -49,8 +69,9 @@ footerCont.addEventListener('click', (e) => {
         footer(e, footerColls);
     }
 })
-//  
+//Валидация формы
 formBtn.addEventListener('click', (e)=>{
     e.preventDefault();
     validationForm(e)
 })
+
