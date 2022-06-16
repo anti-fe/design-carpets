@@ -86,6 +86,7 @@ ul, ol
             color: $c-white
         &:focus 
             border-color: $c-white
+        
     &__input-error
         margin-top: 8px
         color: #e74c3c
@@ -126,3 +127,9 @@ ul, ol
             width: 100%
         &:hover 
             color: $c-black
+    .form__input:required:valid
+        border-color: $c-white
+    .form__input:required:valid + .form__input-label 
+        top: -12px
+        font-size: $fs-18
+        color: $c-white

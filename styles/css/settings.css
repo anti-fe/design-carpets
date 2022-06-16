@@ -191,4 +191,14 @@ ul, ol {
 .form__btn:hover {
   color: #262626;
 }
+
+.form .form__input:required:valid {
+  border-color: #fff;
+}
+
+.form .form__input:required:valid + .form__input-label {
+  top: -12px;
+  font-size: 18px;
+  color: #fff;
+}
 /*# sourceMappingURL=settings.css.map */
