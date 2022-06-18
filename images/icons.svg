@@ -9,9 +9,4 @@
             <path d="M1 1.29395L15 15.2939L1 29.2939" stroke="#262626" stroke-width="2"/>
         </svg>
     </symbol>
-    <symbol id='slider-prev-icon' viewBox="0 0 17 30">
-        <svg fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 1.29395L2 15.2939L16 29.2939" stroke="#262626" stroke-width="2"/>
-        </svg>
-    </symbol>
 </svg>

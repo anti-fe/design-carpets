@@ -24,6 +24,7 @@
   box-sizing: border-box;
   font-family: "Gilroy Light";
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }
 
 body {
