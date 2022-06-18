@@ -1,9 +1,11 @@
-import slider from './scripts/slider.js';
+import orderSlider from './scripts/orderSlider.js';
+import worksSlider from './scripts/worksSlider.js';
 import animations from './scripts/animations.js';
 import accordion from './scripts/accordion.js';
 import footer from './scripts/footer.js';
 import validationForm from './scripts/validationForm.js';
 import modalWindow from './scripts/modalWindow.js';
+import horizontalAccordion from './scripts/horizontalAccordion.js';
 
 const burgerMenuBtn = document.querySelector('.burger-menu__close-btn'),
     burgerMenu = document.querySelector('.burger-menu');
@@ -18,6 +20,7 @@ const formBtn = document.querySelector('.form__btn');
 const logo = document.querySelector('.header__logo');
 
 const servicesCont = document.querySelector('.main__cards-list');
+const orderCont = document.querySelector('.order__cards');
 
 let localHost;
 
@@ -59,7 +62,7 @@ allInputs.forEach(item => {
 console.log(window.location.pathname);
 
 
-
+//Работает только на главной странице
 if(window.location.pathname == '/' ||
 window.location.pathname == '/index.html' ||
 window.location.pathname == '/design-carpets/' || 
@@ -68,6 +71,13 @@ window.location.pathname == '/design-carpets/index.html') {
     animations();
     //Steps accordion
     accordion();
+    //Горизонтальный аккордион 
+    orderCont.addEventListener('click',(e) => {
+        const item = e.target.closest('.order__card');
+        if(item && !item.classList.contains('order__card_active')) {
+            horizontalAccordion(item);
+        }
+    })
 }
 
 // Footer accordion
@@ -82,6 +92,8 @@ formBtn.addEventListener('click', (e) => {
     validationForm(e)
 })
 //Модальное окно
+if(window.location.pathname == '/pages/services.html' ||
+window.location.pathname == 'design-carpets/pages/services.html')
 servicesCont.addEventListener('click', (e) => {
     e.preventDefault();
     if(e.target.classList.contains('main__card-btn')) {

@@ -239,6 +239,7 @@
   background-color: #445658;
   text-align: center;
   border-radius: 0px 0px 30px 0px;
+  border: 1px solid #445658;
   transition: all .3s ease;
   padding: 10px 25px;
   border: none;

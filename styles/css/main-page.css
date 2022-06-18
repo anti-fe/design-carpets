@@ -60,6 +60,7 @@
   background-color: #445658;
   text-align: center;
   border-radius: 0px 0px 30px 0px;
+  border: 1px solid #445658;
   font-size: 22px;
   padding: 10px 47px;
   color: #fff;
@@ -242,7 +243,7 @@
   margin-top: 120px;
 }
 
-.swiper {
+.works__slider {
   margin: 0 auto;
   width: 100%;
   height: 100%;
@@ -250,18 +251,18 @@
   user-select: none;
 }
 
-.swiper-photo {
+.works__slider .swiper-photo {
   object-fit: cover;
   height: 100%;
   width: 100%;
 }
 
-.swiper-scrollbar {
+.works__slider .swiper-scrollbar {
   overflow: hidden;
   width: 100%;
 }
 
-.swiper-scrollbar-drag {
+.works__slider .swiper-scrollbar-drag {
   background-color: #445658 !important;
 }
 
@@ -414,6 +415,248 @@
 .steps__item.steps__item_active .steps__item-arrow {
   stroke: #445658;
   transform: rotate(45deg);
+}
+
+.order {
+  margin-top: 120px;
+}
+
+.order__cards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.order__card {
+  padding: 90px 0;
+  width: 10%;
+  height: 655px;
+  background-color: #445658;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transition: all .3s ease;
+  overflow: hidden;
+  justify-content: center;
+}
+
+@media (max-width: 568px) {
+  .order__card {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .order__card {
+    height: 964px;
+  }
+}
+
+@media (max-width: 768px) {
+  .order__card {
+    height: 905px;
+  }
+}
+
+@media (max-width: 600px) {
+  .order__card {
+    height: 855px;
+  }
+}
+
+@media (max-width: 564px) {
+  .order__card {
+    height: 744px;
+  }
+}
+
+.order__card:nth-child(2) {
+  border-right: none;
+  border-left: none;
+}
+
+.order__card-text {
+  margin-top: 35px;
+  position: absolute;
+  opacity: 0;
+  user-select: none;
+  transition: all .3s ease;
+}
+
+.order__card-info {
+  position: relative;
+}
+
+.order__card .order__card-descr:first-child {
+  margin-bottom: 12px;
+}
+
+.order__card-descr {
+  max-width: 480px;
+  font-size: 22px;
+  color: #262626;
+  font-family: "Gilroy Light";
+}
+
+@media (max-width: 992px) {
+  .order__card-descr {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .order__card-descr {
+    font-size: 18px;
+  }
+}
+
+.order__card-title {
+  font-size: 26px;
+  color: #fff;
+  font-family: "Gilroy Light";
+  transform: rotate(-90deg);
+  margin: 0 auto;
+  margin-top: 70px;
+  max-height: 30px;
+  width: auto;
+  transition: all .3s ease;
+}
+
+@media (max-width: 568px) {
+  .order__card-title {
+    font-size: 22px;
+  }
+}
+
+.order__card-btn {
+  border: none;
+  cursor: pointer;
+  background-color: #445658;
+  text-align: center;
+  border-radius: 0px 0px 30px 0px;
+  border: 1px solid #445658;
+  font-size: 22px;
+  padding: 10px 47px;
+  color: #fff;
+  margin-top: 35px;
+  position: relative;
+  transition: all 1s ease;
+  z-index: 1;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.order__card-btn:hover {
+  color: #445658;
+}
+
+.order__card-btn:hover::after {
+  width: 100%;
+}
+
+.order__card-btn::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  height: 100%;
+  width: 0;
+  transition: all .3s ease;
+  border-radius: 0 0 30px 0;
+}
+
+@media (max-width: 564px) {
+  .order__card-btn {
+    font-size: 18px;
+  }
+}
+
+.order__card.order__card_active {
+  width: 100%;
+  background-color: #FBFBFB;
+  grid-template-columns: minmax(300px, 480px) minmax(400px, 605px);
+  gap: 150px;
+}
+
+@media (max-width: 1300px) {
+  .order__card.order__card_active {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .order__card.order__card_active {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .order__card.order__card_active {
+    gap: 0;
+  }
+}
+
+.order__card.order__card_active .order__card-title {
+  transform: rotate(0deg);
+  margin-top: 0px;
+  font-size: 26px;
+  color: #262626;
+  font-family: "Lighthaus";
+}
+
+.order__card.order__card_active .order__card-btn {
+  display: block;
+}
+
+.order__slider {
+  max-width: 600px;
+  max-height: 520px;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+  justify-self: center;
+}
+
+.order__card.order__card_active .order__slider {
+  opacity: 1;
+  user-select: auto;
+  pointer-events: auto;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.order__card.order__card_active .order__card-info {
+  padding-left: 15px;
+}
+
+.order__card.order__card_active .order__card-text {
+  opacity: 1;
+  user-select: auto;
+  position: static;
+}
+
+.order .swiper-button-next, .order .swiper-button-prev {
+  color: #262626;
+  width: 17px;
+  height: 30px;
+}
+
+.order .swiper-slide {
+  display: grid;
+  place-items: center;
+}
+
+.order .swiper-photo {
+  width: 45%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .consultation {

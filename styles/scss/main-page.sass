@@ -128,21 +128,21 @@
         font-family: $ff-lighthaus
 .our-works
     margin-top: $m-section
-.swiper 
+.works__slider 
     margin: 0 auto
     width: 100%
     // max-height: 595px
     height: 100%
     padding-bottom: 20px !important
     user-select: none
-    &-photo 
+    .swiper-photo 
         object-fit: cover
         height: 100%
         width: 100%
-    &-scrollbar 
+    .swiper-scrollbar 
         overflow: hidden
         width: 100%
-    &-scrollbar-drag
+    .swiper-scrollbar-drag
         background-color: $c-accent !important
 .steps 
     margin-top: $m-section
@@ -233,6 +233,145 @@
     &__item.steps__item_active &__item-arrow
         stroke: $c-accent
         transform: rotate(45deg)
+.order 
+    margin-top: $m-section 
+    &__cards
+        width: 100%
+        height: 100%
+        display: flex
+    &__card 
+        padding: 90px 0
+        width: 10%
+        height: 655px
+        background-color: $c-accent
+        list-style-type: none
+        display: grid
+        grid-template-columns: 1fr
+        border-left: 1px solid $c-white
+        border-right: 1px solid $c-white
+        transition: all .3s ease
+        overflow: hidden
+        justify-content: center
+        @media (max-width: 568px) 
+            padding: 50px 0
+        @media (max-width: 992px) 
+            height: 964px
+        @media (max-width: 768px) 
+            height: 905px
+        @media (max-width: 600px) 
+            height: 855px
+        @media (max-width: 564px) 
+            height: 744px
+    &__card:nth-child(2)
+        border-right: none
+        border-left: none
+    &__card-text 
+        margin-top: 35px
+        position: absolute
+        opacity: 0
+        user-select: none
+        transition: all .3s ease 
+    &__card-info 
+        position: relative
+    &__card &__card-descr:first-child
+        margin-bottom: 12px
+    &__card-descr 
+        max-width: 480px
+        +text($fs-22, $c-black, $ff-gilroy-l)
+        @media (max-width: 992px) 
+            max-width: 100%
+        @media (max-width: 768px) 
+            font-size: $fs-18
+    &__card-title 
+        +text($fs-26, $c-white, $ff-gilroy-l)
+        transform: rotate(-90deg)
+        margin: 0 auto
+        margin-top: 70px
+        max-height: 30px
+        width: auto
+        transition: all .3s ease
+        @media (max-width: 568px) 
+            font-size: $fs-22
+    &__card-btn 
+        border: none
+        +btn-dark
+        font-size: $fs-22
+        padding: 10px 47px
+        color: $c-white
+        margin-top: 35px
+        position: relative
+        transition: all 1s ease
+        z-index: 1
+        margin-bottom: 15px
+        display: none
+        &:hover
+            color: $c-accent
+        &:hover::after 
+            width: 100%
+        &::after 
+            content: ''
+            position: absolute
+            z-index: -1
+            bottom: 0
+            left: 0
+            background-color: $c-white
+            height: 100%
+            width: 0 
+            transition: all .3s ease
+            border-radius: 0 0 30px 0
+        @media (max-width: 564px) 
+            font-size: $fs-18
+    &__card.order__card_active  
+        width: 100%
+        background-color: $c-lightgray
+        grid-template-columns: minmax(300px,480px) minmax(400px,605px)
+        gap: 150px
+        @media (max-width: 1300px) 
+            gap: 50px
+        @media (max-width: 992px) 
+            grid-template-columns: 1fr
+        @media (max-width: 768px) 
+            gap: 0
+    &__card.order__card_active &__card-title 
+        transform: rotate(0deg)
+        margin-top: 0px
+        +text($fs-26, $c-black, $ff-lighthaus)
+    &__card.order__card_active &__card-btn
+        display: block
+    &__slider
+        max-width: 600px
+        max-height: 520px
+        height: 100%
+        width: 0
+        opacity: 0
+        user-select: none
+        pointer-events: none
+        justify-self: center
+    &__card.order__card_active &__slider 
+        opacity: 1
+        user-select: auto
+        pointer-events: auto
+        width: 100%
+        display: grid
+        place-items: center
+    &__card.order__card_active &__card-info 
+        padding-left: 15px
+    &__card.order__card_active &__card-text 
+        opacity: 1
+        user-select: auto
+        position: static
+    .swiper-button-next, .swiper-button-prev 
+        color: $c-black
+        width: 17px
+        height: 30px
+    & .swiper-slide 
+        display: grid
+        place-items: center
+    & .swiper-photo
+        width: 45%
+        height: 100%
+        object-fit: cover
+
 .consultation 
     margin-top: $m-section
     &__title 

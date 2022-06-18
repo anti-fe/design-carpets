@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+const worksSlider = new Swiper('.works__slider', {
     // Optional parameters
     slidesPerView: 4,
     spaceBetween: 10,
@@ -46,4 +46,4 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
-export default swiper;
+export default worksSlider;
