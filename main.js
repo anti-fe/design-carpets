@@ -93,7 +93,7 @@ formBtn.addEventListener('click', (e) => {
 })
 //Модальное окно
 if(window.location.pathname == '/pages/services.html' ||
-window.location.pathname == 'design-carpets/pages/services.html')
+window.location.pathname == '/design-carpets/pages/services.html')
 servicesCont.addEventListener('click', (e) => {
     e.preventDefault();
     if(e.target.classList.contains('main__card-btn')) {
