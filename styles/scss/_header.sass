@@ -34,21 +34,19 @@
         transition: color .2s ease
         &::before 
             content: ''
-            height: 0
+            height: 1.5px
             width: 100%
             position: absolute
-            top: 0
+            bottom: 15px
             left: 0
             background-color: $c-accent
             transition: all .2s ease
             z-index: -1
+            transform: scaleX(0)
         &:hover::before 
-            height: 10%
-        &:active::before 
-            height: 100%
-        &:active 
-            color: $c-white
-  
+            transform: scaleX(.4)
+    &.header_active &__navbar-link::before 
+        bottom: 5px
 .burger-menu 
     background-color: $c-accent
     max-width: 350px

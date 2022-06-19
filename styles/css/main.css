@@ -71,26 +71,23 @@
 
 .header__navbar-link::before {
   content: '';
-  height: 0;
+  height: 1.5px;
   width: 100%;
   position: absolute;
-  top: 0;
+  bottom: 15px;
   left: 0;
   background-color: #445658;
   transition: all .2s ease;
   z-index: -1;
+  transform: scaleX(0);
 }
 
 .header__navbar-link:hover::before {
-  height: 10%;
+  transform: scaleX(0.4);
 }
 
-.header__navbar-link:active::before {
-  height: 100%;
-}
-
-.header__navbar-link:active {
-  color: #fff;
+.header.header_active .header__navbar-link::before {
+  bottom: 5px;
 }
 
 .burger-menu {
