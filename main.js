@@ -1,11 +1,10 @@
-import orderSlider from './scripts/orderSlider.js';
-import worksSlider from './scripts/worksSlider.js';
 import animations from './scripts/animations.js';
 import accordion from './scripts/accordion.js';
 import footer from './scripts/footer.js';
 import validationForm from './scripts/validationForm.js';
 import modalWindow from './scripts/modalWindow.js';
 import horizontalAccordion from './scripts/horizontalAccordion.js';
+import portfolio from './scripts/portfolio.js';
 
 const burgerMenuBtn = document.querySelector('.burger-menu__close-btn'),
     burgerMenu = document.querySelector('.burger-menu');
@@ -21,6 +20,7 @@ const logo = document.querySelector('.header__logo');
 
 const servicesCont = document.querySelector('.main__cards-list');
 const orderCont = document.querySelector('.order__cards');
+const namesList = document.querySelector('.main__list');
 
 let localHost;
 
@@ -59,8 +59,6 @@ allInputs.forEach(item => {
         item.classList.remove('form__input_focus');
     })
 })
-console.log(window.location.pathname);
-
 
 //Работает только на главной странице
 if(window.location.pathname == '/' ||
@@ -76,6 +74,16 @@ window.location.pathname == '/design-carpets/index.html') {
         const item = e.target.closest('.order__card');
         if(item && !item.classList.contains('order__card_active')) {
             horizontalAccordion(item);
+        }
+    })
+}
+//Работает только на странице Портфолио
+if(window.location.pathname == '/design-carpets/pages/portfolio.html' || 
+window.location.pathname == '/pages/portfolio.html') {
+    namesList.addEventListener('click',(e) => {
+        const item = e.target.closest('.main__list-item');
+        if(item && !item.classList.contains('main__list-item_active')) {
+            portfolio(item);
         }
     })
 }

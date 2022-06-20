@@ -27,6 +27,16 @@
   scroll-padding-top: 70px;
 }
 
+html ::-webkit-scrollbar {
+  width: 10px;
+}
+
+html ::-webkit-scrollbar-thumb {
+  background: #E6E6E6;
+  border: 2px solid #fff;
+  border-radius: 100px;
+}
+
 body {
   font-size: 18px;
   scroll-behavior: smooth;

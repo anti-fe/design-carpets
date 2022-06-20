@@ -25,14 +25,19 @@
     scroll-behavior: smooth
     scroll-padding-top: 70px
     // scroll-padding-top: 
+html 
+    ::-webkit-scrollbar 
+        width: 10px
+    ::-webkit-scrollbar-thumb 
+        background: $c-gray
+        border: 2px solid $c-white
+        border-radius: 100px
 body 
     font-size: $fs-18
     scroll-behavior: smooth
     overflow-x: hidden
     max-width: 3400px
     margin: 0 auto
-    
-    
 h1,h2,h3,h4,h5 
     font-family: $ff-lighthaus
     font-weight: lighter

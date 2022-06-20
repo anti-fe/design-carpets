@@ -1,0 +1,253 @@
+.main {
+  padding-top: 161px;
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+    padding-top: 80px;
+  }
+}
+
+.main__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .main__list {
+    max-height: 270px;
+  }
+}
+
+.main__list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  max-width: 488px;
+  width: 100%;
+  padding: 15px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.main__list-item::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: #E6E6E6;
+  bottom: 0;
+  left: 0;
+  transition: all .3s ease;
+}
+
+@media (max-width: 992px) {
+  .main__list-item {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .main__list-item {
+    max-width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 564px) {
+  .main__list-item {
+    padding: 5px 0;
+  }
+}
+
+.main__item-name {
+  font-size: 26px;
+  color: #262626;
+  font-family: "Gilroy Light";
+  transition: all .3s ease;
+}
+
+@media (max-width: 992px) {
+  .main__item-name {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 564px) {
+  .main__item-name {
+    font-size: 16px;
+  }
+}
+
+.main__item-arrow {
+  stroke: #262626;
+  max-width: 15px;
+  max-height: 15px;
+  transition: all .3s ease;
+}
+
+@media (max-width: 564px) {
+  .main__item-arrow {
+    max-width: 10px;
+    max-height: 10px;
+  }
+}
+
+.main__list-item.main__list-item_active .main__item-arrow {
+  transform: rotate(-45deg);
+  stroke: #445658;
+}
+
+.main__list-item.main__list-item_active .main__item-name {
+  color: #445658;
+}
+
+.main__list-item.main__list-item_active::after {
+  background-color: #445658;
+}
+
+.main__card-list {
+  position: relative;
+}
+
+.main__card {
+  transition: all .3s ease;
+  opacity: 0;
+  top: 0;
+  position: absolute;
+}
+
+.main__card.main__card_active {
+  opacity: 1;
+  position: static;
+}
+
+.main__card-photos {
+  display: grid;
+  grid-template-columns: minmax(295px, 636px) minmax(213px, 460px);
+  grid-template-rows: repeat(2, 370px);
+  gap: 10px;
+}
+
+@media (max-width: 992px) {
+  .main__card-photos {
+    grid-template-columns: 295px 213px;
+    grid-template-rows: repeat(2, 247px);
+    gap: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main__card-photos {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.main__card-img {
+  width: 100%;
+  height: 100%;
+}
+
+.main__card-img-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main__card .main__card-photos .main__card-img:first-child {
+  grid-row: 1 / 3;
+}
+
+.main__card-info {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+@media (max-width: 992px) {
+  .main__card-info {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main__card-info {
+    margin-left: 10px;
+  }
+}
+
+.main__info-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.main__info-block::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: #E6E6E6;
+  bottom: 0;
+  left: 0;
+}
+
+.main__info-block:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 992px) {
+  .main__info-block {
+    padding-bottom: 5px;
+  }
+}
+
+.main__info-proff {
+  text-transform: uppercase;
+  font-size: 22px;
+  color: #262626;
+  font-family: "Gilroy Light";
+}
+
+@media (max-width: 992px) {
+  .main__info-proff {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 564px) {
+  .main__info-proff {
+    font-size: 14px;
+  }
+}
+
+.main__info-name {
+  font-size: 22px;
+  color: #262626;
+  font-family: "Gilroy Light";
+}
+
+@media (max-width: 992px) {
+  .main__info-name {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 564px) {
+  .main__info-name {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=portfolio.css.map */

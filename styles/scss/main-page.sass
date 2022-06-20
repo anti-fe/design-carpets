@@ -372,55 +372,6 @@
         height: 100%
         object-fit: cover
 
-.consultation 
-    margin-top: $m-section
-    &__title 
-        color: $c-accent
-    &__wrapper 
-        display: grid 
-        grid-template-columns: minmax(400px,500px) minmax(500px, 930px)
-        align-items: center
-        position: relative
-        @media (max-width: 1290px)
-            grid-template-columns: minmax(320px, 330px) minmax(500px, 1025px)
-        @media (max-width: 992px) 
-            grid-template-columns: 1fr
-    &__block
-        width: 100%
-        height: 100%
-    &__photo
-        object-fit: cover
-        max-width: 794px
-        width: 100%
-        height: 100%
-        border-radius: 0px 280px 0px 0px
-        position: absolute
-        @media (max-width: 1290px)
-            max-width: 620px
-    &__form-title
-        color: $c-white
-        font-size: $fs-28
-        margin-bottom: 50px
-    &__block:last-child
-        +flex(center, center, column)
-        background-color: $c-accent
-        height: 95%
-        // min-height: 300px
-        padding: 110px 0 110px 290px
-        max-width: 930px
-        @media (max-width: 992px) 
-           max-width: 700px
-           min-width: none
-           width: 100%
-        @media (max-width: 992px) 
-            padding: 110px 0 110px 0px
-    &__block:first-child 
-        @media (max-width: 992px) 
-            display: none
-
-
-
-
 @media (max-width: 992px)
     .steps__item.steps__item_active .steps__item-body
         max-height: 926px

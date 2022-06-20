@@ -19,6 +19,8 @@
         +flex(space-between, center, row)
         height: 100%
         margin: 0 auto
+        & .header__navbar-link.active::before
+            transform: scaleX(.4)
         @media (max-width: 768px)
             display: none
     &__navbar-item

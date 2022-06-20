@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,KAAK,CAAC;EACF,WAAW,EAAE,KAAK;CAAG",
+    "sources": [
+        "../scss/contacts.sass",
+        "../scss/_vars.sass",
+        "../scss/_mixins.sass",
+        "../scss/_vars.sass"
+    ],
+    "names": [],
+    "file": "contacts.css"
+}
