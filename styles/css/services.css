@@ -58,6 +58,7 @@
   left: 2%;
   top: 45%;
   transition: all .3s ease;
+  opacity: 0;
   font-size: 64px;
   color: #262626;
   font-family: "Lighthaus";
@@ -126,6 +127,7 @@
 .main__card:hover.main__card::before {
   font-size: 26px;
   top: 5%;
+  opacity: 1;
 }
 
 .main__card:hover .main__card-info {
