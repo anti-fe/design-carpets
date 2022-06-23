@@ -1,12 +1,12 @@
 .header 
     width: 100%
-    height: 81px
-    transition: all .3s ease
+    height: 50px
+    transition: all .5s ease
     background-color: $c-white
     position: fixed
     z-index: 500
     &_active 
-        height: 50px
+        transform: translateY(-100px)
     &__navbar 
         +flex(normal, center, row)
         height: 100%
@@ -39,7 +39,7 @@
             height: 1.5px
             width: 100%
             position: absolute
-            bottom: 15px
+            bottom: 5px
             left: 0
             background-color: $c-accent
             transition: all .2s ease

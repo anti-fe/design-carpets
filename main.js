@@ -24,6 +24,8 @@ const namesList = document.querySelector('.main__list');
 
 let localHost;
 
+let prevScrollWindow = window.scrollY;
+
 //Узнаем localHost или нет
 if (["localhost", "127.0.0.1", ""].includes(window.location.hostname)) {
     localHost = true;
@@ -48,7 +50,12 @@ burgerMenuBtn.addEventListener('click', ()=>{
 })
 //Уменьшение header при скроле
 window.addEventListener('scroll', (e)=>{
-    window.scrollY >= 200 ? header.classList.add('header_active') : header.classList.remove('header_active');
+    if(window.scrollY >= 200 && window.scrollY > prevScrollWindow) {
+        header.classList.add('header_active')
+    } else {
+        header.classList.remove('header_active');
+    }
+    prevScrollWindow = window.scrollY;
 })
 //Focus input
 allInputs.forEach(item => {
