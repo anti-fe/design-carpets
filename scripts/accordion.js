@@ -9,12 +9,13 @@ export default function accordion() {
                 accordionItem.classList.remove('steps__item_active');
                 return;
             }
+            // Закрытие предыдущего открытого аккордеона
             allAccordionItems.forEach(item => {
                 if(item.classList.contains('steps__item_active')) {
                     item.classList.remove('steps__item_active');
                 }
             })
-            
+            // Открытие аккордеона по которому был сделан клик
             accordionItem.classList.add('steps__item_active');
         }
     })

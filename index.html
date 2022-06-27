@@ -289,6 +289,65 @@
       </div>
     </section>
     <!-- ORDER -->
+    <div class="bg-modal">
+      <div class="modal-tabs">
+        <div class="modal-tabs__header" id="modal-tabs">
+          <button class="modal-tabs__tab modal-tabs__tab_active" data-id="1">Кол-во</button>
+          <button class="modal-tabs__tab" data-id="2">Размер</buttonг>
+          <button class="modal-tabs__tab" data-id="3">Личная данные</button>
+        </div>
+        <div class="modal-tabs__body">
+          <form class="modal-tabs__form modal-tabs__form_active" data-id="1">
+            <div class="form__inputs">
+              <h3 class="modal-tabs__name">Выберите количество ковров</h3>
+              <div class="modal-tabs__box">
+                <div class="modal-tabs__box-counter">
+                  <input class="modal-tabs__box-count" id="select-count" type="number" min="1" max="99" value="1">
+                  <div class="modal-tabs__box-btns">
+                    <button class="modal-tabs__box-btn" id="plus">+</button>
+                    <button class="modal-tabs__box-btn" id="minus">-</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="modal-tabs__btn" data-id="1">Дальше</button>
+          </form>
+          <form class="modal-tabs__form" data-id="2">
+            <div class="form__inputs">
+              <h3 class="modal-tabs__name">Выберите размеры ковров</h3>
+              <div class="form__input-box">
+                <select id="select-size" multiple class="form__name form__input" required>
+                  <option value="60x110" selected>60 x 110</option>
+                  <option value="80x200">80 x 200</option>
+                  <option value="120x160">120 x 160</option>
+                  <option value="130x180">130 x 180</option>
+                  <option value="150x300">150 x 300</option>
+                  <option value="180x290">180 x 290</option>
+                  <option value="180x490">180 x 490</option>
+                </select>
+              </div>
+            </div>
+            <button class="modal-tabs__btn" data-id="2">Дальше</button>
+          </form>
+          <form class="modal-tabs__form" data-id="3">
+            <div class="form__inputs">
+              <div class="form__input-box">
+                <input type="text" id="input-name4" class="form__name form__input" required>
+                <label for="input-name4" class="form__input-label">Введите имя</label>
+                <p class="form__input-error"></p>
+              </div>
+              <div class="form__input-box">
+                <input type="tel" id="input-phone4" class="form__phone form__input" required>
+                <label for="input-phone4" class="form__input-label">Введите номер телефона</label>
+                <p class="form__input-error"></p>
+              </div>
+            </div>
+            <button class="modal-tabs__btn modal-tabs__send-btn" data-id="3">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <section class="order" id='order'>
       <h2 class="order__title section-title container">ЗАКАЗАТЬ КОВЁР</h2>
       <ul class="order__cards">

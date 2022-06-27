@@ -5,6 +5,10 @@ import validationForm from './scripts/validationForm.js';
 import modalWindow from './scripts/modalWindow.js';
 import horizontalAccordion from './scripts/horizontalAccordion.js';
 import portfolio from './scripts/portfolio.js';
+import modalTabs from './scripts/modalTabs.js';
+import changeTab from './scripts/changeTab.js';
+import countPlus from './scripts/countPlus.js';
+import countMinus from './scripts/countMinus.js';
 
 const burgerMenuBtn = document.querySelector('.burger-menu__close-btn'),
     burgerMenu = document.querySelector('.burger-menu');
@@ -19,8 +23,11 @@ const formBtn = document.querySelector('.form__btn');
 const logo = document.querySelector('.header__logo');
 
 const servicesCont = document.querySelector('.main__cards-list');
-const orderCont = document.querySelector('.order__cards');
+const orderCont = document.querySelector('.order__cards'),
+    orderModal = document.querySelector('.bg-modal');
 const namesList = document.querySelector('.main__list');
+
+const modalTabsCont = document.querySelector('.modal-tabs');
 
 let localHost;
 
@@ -78,9 +85,17 @@ window.location.pathname == '/design-carpets/index.html') {
     accordion();
     //Горизонтальный аккордион 
     orderCont.addEventListener('click',(e) => {
-        const item = e.target.closest('.order__card');
-        if(item && !item.classList.contains('order__card_active')) {
-            horizontalAccordion(item);
+        const itemCard = e.target.closest('.order__card');
+        const itemCardBtn = e.target.closest('.order__card-btn');
+        if(itemCard && !itemCard.classList.contains('order__card_active')) {
+            horizontalAccordion(itemCard);
+        } else if(itemCardBtn) {
+            orderModal.classList.add('bg-modal_active')
+            orderModal.addEventListener('click', (e)=>{
+                if(!e.target.closest('.modal-tabs')) {
+                    orderModal.classList.remove("bg-modal_active");
+                }
+            })
         }
     })
 }
@@ -113,5 +128,26 @@ servicesCont.addEventListener('click', (e) => {
     e.preventDefault();
     if(e.target.classList.contains('main__card-btn')) {
         modalWindow();
+    }
+})
+// Модальное окно с табами 
+modalTabsCont.addEventListener('click', (e) => {
+    e.preventDefault();
+    if(e.target.closest('.modal-tabs__tab')) {
+        modalTabs(e.target);
+    } else if(e.target.classList.contains('modal-tabs__send-btn')) {
+        validationForm(e)
+    } else if(e.target.classList.contains('modal-tabs__btn') &&
+    !e.target.classList.contains('modal-tabs__send-btn')) {
+        changeTab(e.target);
+    } else if(e.target.closest('.modal-tabs__box-btns')) {
+        const counterCont = e.target.closest('.modal-tabs__box-btns');
+        const counterValue = counterCont.parentElement.querySelector('.modal-tabs__box-count');
+        
+        if(e.target.getAttribute('id') === 'plus') {
+            countPlus(counterValue);
+        } else if (e.target.getAttribute('id') === 'minus') {
+            countMinus(counterValue);
+        }
     }
 })

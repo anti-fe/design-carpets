@@ -6,6 +6,7 @@ export default function footer(e, footerColls) {
         itemParent.classList.remove('footer__col_active');
         return;
     }
+    // Закрытие все секций футора
     footerColls.forEach(item => {
         if(item.classList.contains('footer__col_active')) {
             item.classList.remove('footer__col_active');

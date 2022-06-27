@@ -153,6 +153,7 @@ ul, ol {
   font-family: "Gilroy Light";
   cursor: text;
   user-select: none;
+  pointer-events: none;
   background-color: #445658;
   padding: 2px 4px;
   transition: all .2s ease;

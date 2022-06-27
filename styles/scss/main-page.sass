@@ -372,6 +372,140 @@
         height: 100%
         object-fit: cover
 
+.bg-modal
+    background-color: rgba(0, 0, 0, 0.5)
+    width: 100%
+    height: 100%
+    position: fixed 
+    z-index: 999
+    top: 0
+    left: 0
+    display: grid 
+    place-items: center
+    user-select: none
+    pointer-events: none
+    opacity: 0
+    transition: all .3s ease
+    &.bg-modal_active 
+        user-select: auto
+        pointer-events: auto 
+        opacity: 1
+.modal-tabs
+    position: relative
+    display: grid 
+    place-items: center
+    background-color: $c-accent
+    border-radius: 0 0 30px 0
+    max-width: 405px
+    width: 100%
+    &__header
+        height: 41px
+        width: 100%
+        display: grid 
+        grid-template-columns: 110px 114px 181px
+        margin-bottom: 40px
+    
+    &__tab 
+        cursor: pointer
+        height: 100%
+        background-color: rgba(255, 255, 255, 0.15)
+        border: none 
+        width: 100%
+        +text($fs-18, $c-accent, $ff-gilroy-l)
+        transition: all .3s ease
+        &:hover 
+            background-color: rgba(255, 255, 255, 0.20)
+        &.modal-tabs__tab_active:hover 
+            background-color: #4C6062
+        &_active 
+            color: $c-white
+            background-color: $c-accent
+    &__body 
+        width: 100%
+        position: relative
+    &__name
+        +text($fs-18, rgba(255, 255, 255, 0.15), $ff-gilroy-l)
+        text-align: center
+        margin-bottom: 20px
+    &__box
+        +flex(center,center,row)
+    &__box-count
+        +text(16px, $c-white, $ff-gilroy-l)
+        max-width: 25px
+        width: 100%
+        background-color: transparent 
+        border: none
+        outline: none
+        appearance: none
+        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+            appearance: none
+    &__box-counter 
+        max-width: 100px 
+        width: 100%
+        border: 1px solid $c-white
+        padding-left: 10px
+        +flex(space-between,center,row)
+    &__box-btns 
+        +flex(center,center,row)
+    &__box-btn 
+        background-color: $c-white
+        font-size: 22px
+        color: $c-accent
+        cursor: pointer
+        font-weight: bold
+        border: none
+        height: 26px
+        width: 26px
+        &:first-child
+            margin-right: 2px
+    &__form 
+        opacity: 0
+        display: none
+        transition: all .3s ease
+        &_active 
+            opacity: 1
+            display: block
+    &__btn 
+        +btn-light
+        padding: 10px 0
+        font-size: $fs-18
+        width: 100%
+        outline: none
+        position: relative
+        z-index: 0
+        transition: all .3s ease
+        margin-top: 40px
+        &::after
+            content: ''
+            position: absolute 
+            left: 0
+            top: 0
+            background-color: $c-white
+            height: 100%
+            width: 0
+            transition: all .3s ease
+            border-radius: 0px 0px 30px 0px
+            z-index: -1
+        &:hover::after
+            width: 100%
+        &:hover 
+            color: $c-black
+.form 
+    &__inputs 
+        width: 100%
+        padding: 0 45px
+    &__inputs:not(:last-child) 
+        margin-bottom: 10px
+    &__input, .form__input-label
+        @media (max-width: 564px)
+            font-size: 18px
+    &__btn 
+        margin-top: 25px
+    &__input-error
+        @media (max-width: 564px)
+            font-size: 14px
+
+    
 @media (max-width: 992px)
     .steps__item.steps__item_active .steps__item-body
         max-height: 926px
