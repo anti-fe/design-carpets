@@ -3,7 +3,7 @@
 }
 
 .main__title {
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 }
 
 .main__cards-list {
@@ -179,7 +179,7 @@
   flex-direction: column;
   background-color: rgba(251, 251, 251, 0.8);
   backdrop-filter: blur(35px);
-  padding: 75px;
+  padding: 75px 90px;
   transition: all .3s ease;
   max-width: 794px;
   width: 100%;
@@ -194,6 +194,7 @@
 @media (max-width: 768px) {
   .main__card-info {
     backdrop-filter: blur(5px);
+    padding: 40px 60px;
   }
 }
 
@@ -230,6 +231,12 @@
 @media (max-width: 992px) {
   .main__card-descr {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 376px) {
+  .main__card-descr {
+    font-size: 16px;
   }
 }
 

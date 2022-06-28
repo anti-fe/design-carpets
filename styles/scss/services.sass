@@ -95,7 +95,7 @@
         +flex(center, center, column)
         background-color: rgba(251, 251, 251, 0.8)
         backdrop-filter: blur(35px)
-        padding: 75px
+        padding: 75px 90px
         transition: all .3s ease
         max-width: 794px
         width: 100%
@@ -103,6 +103,7 @@
             backdrop-filter: blur(10px)
         @media (max-width: 768px)
             backdrop-filter: blur(5px)
+            padding: 40px 60px
         @media (max-width: 564px)
             padding: 15px
             padding-top: 70px
@@ -119,6 +120,8 @@
         text-align: center
         @media (max-width:992px)
             font-size: $fs-18
+        @media (max-width:376px)
+            font-size: 16px
     &__card-btn 
         +text(18px, $c-white, $ff-gilroy-l)
         +btn-dark

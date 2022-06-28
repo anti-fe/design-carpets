@@ -21,8 +21,13 @@
 @media (max-width: 564px) {
   .main__content {
     height: 100%;
-    justify-content: center;
     padding-bottom: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main__content {
+    justify-content: center;
     align-items: center;
   }
 }
@@ -39,6 +44,7 @@
   .main__title {
     font-size: 48px;
     margin-top: 80px;
+    text-align: center;
   }
 }
 
@@ -148,6 +154,12 @@
   font-family: "Gilroy Light";
 }
 
+@media (max-width: 375px) {
+  .about-us__descr {
+    font-size: 16px;
+  }
+}
+
 .about-us__row:first-child .about-us__descr-block {
   padding: 55px 110px;
   background-color: #FBFBFB;
@@ -155,7 +167,7 @@
 
 @media (max-width: 576px) {
   .about-us__row:first-child .about-us__descr-block {
-    padding: 60px 20px;
+    padding: 40px 20px;
   }
 }
 
@@ -200,7 +212,7 @@
 
 @media (max-width: 576px) {
   .about-us__row:last-child .about-us__descr-block {
-    padding: 60px 20px;
+    padding: 40px 20px;
   }
 }
 
@@ -308,7 +320,7 @@
 
 @media (max-width: 564px) {
   .steps__item-header {
-    height: 50px;
+    height: 40px;
   }
 }
 
@@ -351,8 +363,13 @@
 .steps__item-arrow {
   stroke: #262626;
   transition: all .3s ease;
-  min-height: 25px;
-  min-width: 25px;
+}
+
+@media (max-width: 564px) {
+  .steps__item-arrow {
+    max-height: 15px;
+    max-width: 15px;
+  }
 }
 
 .steps__item-body {
@@ -381,6 +398,12 @@
 @media (max-width: 564px) {
   .steps__item-text {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  .steps__item-text {
+    font-size: 16px;
   }
 }
 
@@ -468,7 +491,13 @@
 
 @media (max-width: 564px) {
   .order__card {
-    height: 744px;
+    height: 780px;
+  }
+}
+
+@media (max-width: 375px) {
+  .order__card {
+    height: 900px;
   }
 }
 
@@ -526,7 +555,7 @@
 
 @media (max-width: 568px) {
   .order__card-title {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 
@@ -584,7 +613,7 @@
 
 @media (max-width: 1300px) {
   .order__card.order__card_active {
-    gap: 50px;
+    gap: 15px;
   }
 }
 
@@ -606,6 +635,12 @@
   font-size: 26px;
   color: #262626;
   font-family: "Lighthaus";
+}
+
+@media (max-width: 768px) {
+  .order__card.order__card_active .order__card-title {
+    font-size: 18px;
+  }
 }
 
 .order__card.order__card_active .order__card-btn {
@@ -644,8 +679,26 @@
 
 .order .swiper-button-next, .order .swiper-button-prev {
   color: #262626;
-  width: 17px;
+  width: 150px;
   height: 30px;
+}
+
+@media (max-width: 1150px) {
+  .order .swiper-button-next, .order .swiper-button-prev {
+    width: 37px;
+  }
+}
+
+@media (max-width: 768px) {
+  .order .swiper-button-next, .order .swiper-button-prev {
+    width: 100px;
+  }
+}
+
+@media (max-width: 378px) {
+  .order .swiper-button-next, .order .swiper-button-prev {
+    width: 60px;
+  }
 }
 
 .order .swiper-slide {
@@ -657,6 +710,12 @@
   width: 45%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .order .swiper-button-next:after, .order .swiper-button-prev:after {
+    font-size: 26px;
+  }
 }
 
 .bg-modal {

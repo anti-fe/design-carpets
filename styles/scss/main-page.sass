@@ -16,8 +16,9 @@
         padding-top: 6%
         @media (max-width: 564px)
             height: 100%
-            justify-content: center
             padding-bottom: 200px
+        @media (max-width: 768px)
+            justify-content: center
             align-items: center
     &__title 
         font-size: $fs-64
@@ -28,6 +29,7 @@
         @media (max-width: 768px) 
             font-size: $fs-48
             margin-top: 80px
+            text-align: center
         @media (max-width: 564px) 
             font-size: $fs-36
             text-align: center
@@ -83,11 +85,13 @@
             margin-left: 15px
     &__descr 
         +text($fs-18, $c-black, $ff-gilroy-l)
+        @media (max-width: 375px)
+            font-size: 16px
     &__row:first-child &__descr-block
         padding: 55px 110px
         background-color: $c-lightgray
         @media (max-width: 576px)
-            padding: 60px 20px
+            padding: 40px 20px
     &__row:first-child &__descr-block &__descr:first-child, &__row:last-child &__descr-block &__descr:nth-child(2)
         margin-bottom: 20.75px
     &__photo 
@@ -107,7 +111,7 @@
         padding: 55px 110px
         background-color: $c-lightgray
         @media (max-width: 576px)
-            padding: 60px 20px
+            padding: 40px 20px
     &__row:last-child
         display: grid 
         grid-template-columns: repeat(2, minmax(450px, 1fr))
@@ -170,7 +174,7 @@
         cursor: pointer
         position: relative
         @media (max-width: 564px)
-                height: 50px
+                height: 40px
         &::after
             counter-increment: accordItem 
             content: counter(accordItem) '.'
@@ -195,8 +199,9 @@
     &__item-arrow
         stroke: $c-black
         transition: all .3s ease
-        min-height: 25px
-        min-width: 25px
+        @media (max-width: 564px)
+            max-height: 15px
+            max-width: 15px
     &__item-body 
         display: grid 
         transform: translateY(-20px) 
@@ -214,6 +219,8 @@
         +text($fs-22, $c-black, $ff-gilroy-l)
         @media (max-width: 564px)
             font-size: $fs-18
+        @media (max-width: 375px)
+            font-size: 16px
     &__item-descr &__item-text:not(:last-child) 
         margin-bottom: 20px   
     &__item-photo
@@ -261,7 +268,9 @@
         @media (max-width: 600px) 
             height: 855px
         @media (max-width: 564px) 
-            height: 744px
+            height: 780px
+        @media (max-width: 375px) 
+            height: 900px
     &__card:nth-child(2)
         border-right: none
         border-left: none
@@ -291,7 +300,7 @@
         width: auto
         transition: all .3s ease
         @media (max-width: 568px) 
-            font-size: $fs-22
+            font-size: $fs-18
     &__card-btn 
         border: none
         +btn-dark
@@ -327,7 +336,7 @@
         grid-template-columns: minmax(300px,480px) minmax(400px,605px)
         gap: 150px
         @media (max-width: 1300px) 
-            gap: 50px
+            gap: 15px
         @media (max-width: 992px) 
             grid-template-columns: 1fr
         @media (max-width: 768px) 
@@ -336,6 +345,8 @@
         transform: rotate(0deg)
         margin-top: 0px
         +text($fs-26, $c-black, $ff-lighthaus)
+        @media (max-width: 768px) 
+            font-size: $fs-18
     &__card.order__card_active &__card-btn
         display: block
     &__slider
@@ -362,8 +373,14 @@
         position: static
     .swiper-button-next, .swiper-button-prev 
         color: $c-black
-        width: 17px
+        width: 150px
         height: 30px
+        @media (max-width: 1150px) 
+            width: 37px
+        @media (max-width: 768px) 
+            width: 100px
+        @media (max-width: 378px) 
+            width: 60px
     & .swiper-slide 
         display: grid
         place-items: center
@@ -371,6 +388,9 @@
         width: 45%
         height: 100%
         object-fit: cover
+    .swiper-button-next:after, .swiper-button-prev:after 
+        @media (max-width: 768px) 
+            font-size: 26px
 
 .bg-modal
     background-color: rgba(0, 0, 0, 0.5)

@@ -76,6 +76,12 @@
   }
 }
 
+@media (max-width: 376px) {
+  .main__item-name {
+    font-size: 16px;
+  }
+}
+
 .main__item-arrow {
   stroke: #262626;
   max-width: 15px;
