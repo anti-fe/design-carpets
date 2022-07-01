@@ -1,13 +1,18 @@
 .main {
   padding-top: 161px;
   display: flex;
-  justify-content: center;
   gap: 170px;
 }
 
 @media (max-width: 1220px) {
   .main {
     gap: 70px;
+  }
+}
+
+@media (max-width: 836px) {
+  .main {
+    justify-content: center;
   }
 }
 
