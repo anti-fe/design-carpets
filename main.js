@@ -98,6 +98,27 @@ window.location.pathname == '/design-carpets/index.html') {
             })
         }
     })
+    // Модальное окно с табами 
+    modalTabsCont.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(e.target.closest('.modal-tabs__tab')) {
+            modalTabs(e.target);
+        } else if(e.target.classList.contains('modal-tabs__send-btn')) {
+            validationForm(e)
+        } else if(e.target.classList.contains('modal-tabs__btn') &&
+        !e.target.classList.contains('modal-tabs__send-btn')) {
+            changeTab(e.target);
+        } else if(e.target.closest('.modal-tabs__box-btns')) {
+            const counterCont = e.target.closest('.modal-tabs__box-btns');
+            const counterValue = counterCont.parentElement.querySelector('.modal-tabs__box-count');
+            
+            if(e.target.getAttribute('id') === 'plus') {
+                countPlus(counterValue);
+            } else if (e.target.getAttribute('id') === 'minus') {
+                countMinus(counterValue);
+            }
+        }
+    })
 }
 //Работает только на странице Портфолио
 if(window.location.pathname == '/design-carpets/pages/portfolio.html' || 
@@ -128,26 +149,5 @@ servicesCont.addEventListener('click', (e) => {
     e.preventDefault();
     if(e.target.classList.contains('main__card-btn')) {
         modalWindow();
-    }
-})
-// Модальное окно с табами 
-modalTabsCont.addEventListener('click', (e) => {
-    e.preventDefault();
-    if(e.target.closest('.modal-tabs__tab')) {
-        modalTabs(e.target);
-    } else if(e.target.classList.contains('modal-tabs__send-btn')) {
-        validationForm(e)
-    } else if(e.target.classList.contains('modal-tabs__btn') &&
-    !e.target.classList.contains('modal-tabs__send-btn')) {
-        changeTab(e.target);
-    } else if(e.target.closest('.modal-tabs__box-btns')) {
-        const counterCont = e.target.closest('.modal-tabs__box-btns');
-        const counterValue = counterCont.parentElement.querySelector('.modal-tabs__box-count');
-        
-        if(e.target.getAttribute('id') === 'plus') {
-            countPlus(counterValue);
-        } else if (e.target.getAttribute('id') === 'minus') {
-            countMinus(counterValue);
-        }
     }
 })
